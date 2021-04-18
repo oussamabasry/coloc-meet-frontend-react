@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Footer.css";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <footer class="bg-dark text-white pt-5 pb-4">
+    <footer class="foot text-white pt-5 pb-4">
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -11,67 +12,49 @@ const Footer = (props) => {
               Coloc Meet
             </h5>
             <p>
-              Here you can use rows and columns to organize your footer content.
-              Lorem ipsum dolor sit amet, ital consectetur lorem ipsum dolor sit
-              amet adipisicing elit.
+              Une plateforme dédiée aux étudiants pour les accompagner durant
+              ces études en proposant plusieurs services , en commençant par la
+              recherche d'une colocation.
             </p>
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              Products
+              Services
             </h5>
             <p>
               <a href="#" class="text-white" style={{ textDecoration: "none" }}>
                 {" "}
-                TheProviders
+                Offers
               </a>
             </p>
             <p>
               <a href="#" class="text-white" style={{ textDecoration: "none" }}>
                 {" "}
-                Creativity
-              </a>
-            </p>
-            <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
-                {" "}
-                SourceFiles
-              </a>
-            </p>
-            <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
-                {" "}
-                bootstrap 5 alpha
+                Demandes
               </a>
             </p>
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              Useful links
+              Liens
             </h5>
             <p>
               <a href="#" class="text-white" style={{ textDecoration: "none" }}>
                 {" "}
-                Your Account
+                Accueil
               </a>
             </p>
             <p>
               <a href="#" class="text-white" style={{ textDecoration: "none" }}>
                 {" "}
-                Become an Affiliates
+                Nos Services
               </a>
             </p>
             <p>
               <a href="#" class="text-white" style={{ textDecoration: "none" }}>
-                Shipping Rates
-              </a>
-            </p>
-            <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
-                {" "}
-                Help
+                Contactez Nous
               </a>
             </p>
           </div>
@@ -80,18 +63,10 @@ const Footer = (props) => {
             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
               Contact
             </h5>
-            <p>
-              <i class="fas fa-home mr-3"></i>New York, NY 2333, US
-            </p>
-            <p>
-              <i class="fas fa-envelope mr-3"></i>theproviders98@gmail.com
-            </p>
-            <p>
-              <i class="fas fa-phone mr-3"></i>+92 3162859445
-            </p>
-            <p>
-              <i class="fas fa-print	 mr-3"></i>+01 335 633 77
-            </p>
+            <p>BP 159 Bd Hassan II Mohammedia</p>
+            <p>contact@colocmeet.com</p>
+            <p>05 23 32 22 20 - 05 23 32 35 30</p>
+            <p>05 23 32 25 46</p>
           </div>
         </div>
 
@@ -103,7 +78,7 @@ const Footer = (props) => {
               {" "}
               Copyright ©2021 All rights reserved by:
               <a href="#" style={{ textDecoration: "none" }}>
-                <strong class="text-warning">The Providers</strong>
+                <strong class="text-warning"> Coloc Meet</strong>
               </a>
             </p>
           </div>
@@ -117,7 +92,7 @@ const Footer = (props) => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-facebook-f text-warning"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -126,7 +101,7 @@ const Footer = (props) => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-twitter text-warning"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -135,7 +110,7 @@ const Footer = (props) => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-google-plus"></i>
+                    <i class="fab fa-google-plus text-warning"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -144,7 +119,7 @@ const Footer = (props) => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-linkedin-in text-warning"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -153,7 +128,7 @@ const Footer = (props) => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube text-warning"></i>
                   </a>
                 </li>
               </ul>
