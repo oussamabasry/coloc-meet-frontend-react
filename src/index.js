@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import * as mdb from "mdb-ui-kit";
 
 ReactDOM.render(
   <React.StrictMode>
