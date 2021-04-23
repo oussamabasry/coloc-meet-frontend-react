@@ -1,6 +1,15 @@
+@import "../../assets/styles/variables.css";
+
 .logo {
-  width: 140px;
+  width: 150px;
   height: 60px;
+}
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    width: 120px;
+    height: 50px;
+  }
 }
 
 ul li {
@@ -9,15 +18,19 @@ ul li {
 }
 
 ul li a {
-  color: #fff !important;
+  color: var(--white) !important;
   font-size: 13px;
 }
 
 .navbar .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #f0b90b !important;
+  color: var(--blue) !important;
 }
 
 .navbar {
-  background-color: #12161c;
+  background-color: var(--white);
+}
+
+.nav-link {
+  color: var(--black) !important;
 }

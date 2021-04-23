@@ -66,11 +66,16 @@ const Navbar = () => {
             <ul className="navbar-nav ml-auto mb-0 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  <i class="fas fa-user-plus"></i> CREER UN COMPTE
+                  <i class="fas fa-user-edit"></i> CREER UN COMPTE
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a
+                  className="nav-link"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#staticBackdrop"
+                  href="#"
+                >
                   <i class="fas fa-lock"></i> SE CONNECTER
                 </a>
               </li>

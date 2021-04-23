@@ -65,9 +65,7 @@ const AnnonceDetails = () => {
     <div className="container mt-3 p-5">
       <section className="mb-5">
         <div className="row">
-          <h4 className="mb-3">
-            Location Details
-          </h4>
+          <h4 className="mb-3">Location Details</h4>
           <div class="col-md-6 mb-4 mb-md-0">
             <div id="mdb-lightbox-ui"></div>
 

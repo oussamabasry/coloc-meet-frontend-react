@@ -1,4 +1,17 @@
+@import "../../assets/styles/variables.css";
+
 .foot {
-  background-color: #12161c;
+  background-color: #282d32;
 }
 
+.title {
+  color: white;
+}
+
+.sub-title {
+  color: #dddddd;
+}
+
+.icons-color {
+  color: var(--white);
+}

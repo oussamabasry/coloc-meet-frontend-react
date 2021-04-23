@@ -8,10 +8,10 @@ const Footer = () => {
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+            <h5 class="text-uppercase mb-4 font-weight-bold title">
               Coloc Meet
             </h5>
-            <p>
+            <p className="sub-title">
               Une plateforme dédiée aux étudiants pour les accompagner durant
               ces études en proposant plusieurs services , en commençant par la
               recherche d'une colocation.
@@ -19,17 +19,15 @@ const Footer = () => {
           </div>
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              Services
-            </h5>
+            <h5 class="text-uppercase mb-4 font-weight-bold title">Services</h5>
             <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
+              <a href="#" class="sub-title" style={{ textDecoration: "none" }}>
                 {" "}
                 Offers
               </a>
             </p>
             <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
+              <a href="#" class="sub-title" style={{ textDecoration: "none" }}>
                 {" "}
                 Demandes
               </a>
@@ -37,32 +35,28 @@ const Footer = () => {
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              Liens
-            </h5>
+            <h5 class="text-uppercase mb-4 font-weight-bold title">Liens</h5>
             <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
+              <a href="#" class="sub-title" style={{ textDecoration: "none" }}>
                 {" "}
                 Accueil
               </a>
             </p>
             <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
+              <a href="#" class="sub-title" style={{ textDecoration: "none" }}>
                 {" "}
                 Nos Services
               </a>
             </p>
             <p>
-              <a href="#" class="text-white" style={{ textDecoration: "none" }}>
+              <a href="#" class="sub-title" style={{ textDecoration: "none" }}>
                 Contactez Nous
               </a>
             </p>
           </div>
 
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
-              Contact
-            </h5>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 sub-title">
+            <h5 class="text-uppercase mb-4 font-weight-bold title">Contact</h5>
             <p>BP 159 Bd Hassan II Mohammedia</p>
             <p>contact@colocmeet.com</p>
             <p>05 23 32 22 20 - 05 23 32 35 30</p>
@@ -78,7 +72,7 @@ const Footer = () => {
               {" "}
               Copyright ©2021 All rights reserved by:
               <a href="#" style={{ textDecoration: "none" }}>
-                <strong class="text-warning"> Coloc Meet</strong>
+                <strong class="title"> Coloc Meet</strong>
               </a>
             </p>
           </div>
@@ -92,7 +86,7 @@ const Footer = () => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-facebook-f text-warning"></i>
+                    <i class="fab fa-facebook-f icons-color"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -101,7 +95,7 @@ const Footer = () => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-twitter text-warning"></i>
+                    <i class="fab fa-twitter icons-color"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -110,7 +104,7 @@ const Footer = () => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-google-plus text-warning"></i>
+                    <i class="fab fa-google-plus icons-color"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -119,7 +113,7 @@ const Footer = () => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-linkedin-in text-warning"></i>
+                    <i class="fab fa-linkedin-in icons-color"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -128,7 +122,7 @@ const Footer = () => {
                     class="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
-                    <i class="fab fa-youtube text-warning"></i>
+                    <i class="fab fa-youtube icons-color"></i>
                   </a>
                 </li>
               </ul>
