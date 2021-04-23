@@ -22,7 +22,7 @@ const CardAnnounce = (props) => {
           </div>
           <div className="px-2 mt-3">
             {" "}
-            <button onClick={()=>console.log("Hi")} className="btn">{props.buttonText}</button>{" "}
+            <button className="btn">{props.buttonText}</button>{" "}
           </div>
         </div>
       </div>
