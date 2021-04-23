@@ -1,8 +1,10 @@
-import React from "react";
-import AnnonceDetails from "../annonceDetails/AnnonceDetails";
+import React, { useContext } from "react";
+import { RelatedAnnouncesContext } from "../../contexts/RelatedAnnouncesContext";
 import CardAnnounce from "../cardAnnounce/CardAnnounce";
 
-export const RelatedAnnonace = ({ relatedAnnounces }) => {
+export const RelatedAnnonace = () => {
+  const relatedAnnounces = useContext(RelatedAnnouncesContext)[0];
+
   const annouces = relatedAnnounces.map((announce) => (
     <CardAnnounce
       key={announce.id}
@@ -11,15 +13,15 @@ export const RelatedAnnonace = ({ relatedAnnounces }) => {
       description={announce.description}
       price={announce.price}
       buttonText={announce.buttonText}
-      city= {announce.city}
+      city={announce.city}
     />
   ));
 
   return (
-    <div class="wrapper">
-      <div class="container">
+    <div className="wrapper">
+      <div className="container">
         <h4 className="mb-3">Annonces Similaires</h4>
-        <div class="row g-1">{annouces}</div>
+        <div className="row g-1">{annouces}</div>
       </div>
     </div>
   );

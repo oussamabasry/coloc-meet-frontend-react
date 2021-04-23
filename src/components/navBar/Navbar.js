@@ -66,7 +66,7 @@ const Navbar = () => {
             <ul className="navbar-nav ml-auto mb-0 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  <i class="fas fa-user-edit"></i> CREER UN COMPTE
+                  <i className="fas fa-user-edit"></i> CREER UN COMPTE
                 </a>
               </li>
               <li className="nav-item">
@@ -76,7 +76,7 @@ const Navbar = () => {
                   data-mdb-target="#staticBackdrop"
                   href="#"
                 >
-                  <i class="fas fa-lock"></i> SE CONNECTER
+                  <i className="fas fa-lock"></i> SE CONNECTER
                 </a>
               </li>
             </ul>

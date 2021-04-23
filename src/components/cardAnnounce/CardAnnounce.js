@@ -7,9 +7,13 @@ const CardAnnounce = (props) => {
       <div className="card">
         <div className="inner-card">
           {" "}
-          <img src={props.image} className="card-img rounded" />
+          <img
+            src={props.image}
+            alt="related announce"
+            className="card-img rounded"
+          />
           <div className="d-flex justify-content-between align-items-center mt-3 px-2">
-            <strong>{props.title}</strong>{" "}
+            <strong>{props.title}</strong>
           </div>
           <div className="px-2">
             <small>
@@ -18,7 +22,7 @@ const CardAnnounce = (props) => {
           </div>
           <div className="px-2 mt-3">
             {" "}
-            <button className="btn">{props.buttonText}</button>{" "}
+            <button onClick={()=>console.log("Hi")} className="btn">{props.buttonText}</button>{" "}
           </div>
         </div>
       </div>

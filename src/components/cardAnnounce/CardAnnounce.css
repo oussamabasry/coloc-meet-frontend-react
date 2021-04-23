@@ -12,19 +12,6 @@
   border-radius: 5px;
 }
 
-.heart {
-  cursor: pointer;
-  height: 35px;
-  width: 35px;
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #beb4aa;
-  border-radius: 50%;
-  background-color: #eee;
-}
-
 .btn:focus {
   color: #fff;
   background-color: #025ce2;
@@ -32,7 +19,6 @@
   box-shadow: none;
 }
 
-
-.card-img{
-height: 250px;
+.card-img {
+  height: 250px;
 }
