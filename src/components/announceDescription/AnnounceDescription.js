@@ -35,7 +35,9 @@ const AnnounceDescription = () => {
         </span>
       </p>
       <p className="text-right pt-1">{announce.description}</p>
-      <h5>Conditions</h5>
+      <strong>
+        <h5>Conditions</h5>
+      </strong>
       <div className="table-responsive">
         <table className="table table-sm table-borderless mb-0">
           <tbody>
