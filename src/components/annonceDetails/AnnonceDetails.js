@@ -1,5 +1,4 @@
 import React from "react";
-import { AnnounceDetailsProvider } from "../../contexts/AnnounceDetailsContext";
 import AnnounceDescription from "../announceDescription/AnnounceDescription";
 import AnnounceImages from "../announceImages/AnnounceImages";
 import "./AnnonceDetails.css";
@@ -10,10 +9,8 @@ const AnnonceDetails = () => {
       <section className="mb-5">
         <div className="row">
           <h4 className="mb-3">Location Details</h4>
-          <AnnounceDetailsProvider>
-            <AnnounceImages />
-            <AnnounceDescription />
-          </AnnounceDetailsProvider>
+          <AnnounceImages />
+          <AnnounceDescription />
         </div>
       </section>
     </div>

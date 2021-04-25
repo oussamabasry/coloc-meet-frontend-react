@@ -15,3 +15,7 @@
 .icons-color {
   color: var(--white);
 }
+
+.link-hover :hover {
+  color: var(--blue);
+}

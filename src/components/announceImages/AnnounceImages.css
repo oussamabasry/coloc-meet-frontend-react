@@ -95,3 +95,7 @@
     height: 30px !important;
   }
 }
+
+.pointer {
+  cursor: pointer;
+}

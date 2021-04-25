@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import { AnnounceDetailsContext } from "../../contexts/AnnounceDetailsContext";
+import { connect } from "react-redux";
 
-const AnnounceDescription = () => {
-  const announce = useContext(AnnounceDetailsContext)[0];
-
+const AnnounceDescription = ({ selectedAnnounce }) => {
   const fiveStars = () => {
     const stars = [];
     let primary = "text-warning";
@@ -13,7 +11,7 @@ const AnnounceDescription = () => {
         <li className="list-inline-item" key={iteration}>
           <i
             className={`fas fa-sm fa-star ${
-              iteration <= announce.stars ? primary : secondary
+              iteration <= selectedAnnounce.stars ? primary : secondary
             }`}
           ></i>
         </li>
@@ -24,9 +22,9 @@ const AnnounceDescription = () => {
 
   return (
     <div className="col-md-6">
-      <h5>{announce.title}</h5>
+      <h5>{selectedAnnounce.title}</h5>
       <p className="mb-2 text-muted text-uppercase small">
-        {announce.city} - {announce.date}
+        {selectedAnnounce.city} - {selectedAnnounce.date}
       </p>
       {fiveStars()}
       <p>
@@ -34,7 +32,7 @@ const AnnounceDescription = () => {
           <strong>1000 DHS </strong>
         </span>
       </p>
-      <p className="text-right pt-1">{announce.description}</p>
+      <p className="text-right pt-1">{selectedAnnounce.description}</p>
       <strong>
         <h5>Conditions</h5>
       </strong>
@@ -45,27 +43,28 @@ const AnnounceDescription = () => {
               <th className="pl-0 w-50" scope="row">
                 <strong>Sexe de colocs</strong>
               </th>
-              <td>{announce.gender}</td>
+              <td>{selectedAnnounce.gender}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Nombre de colocs</strong>
               </th>
-              <td>{announce.roommates_number}</td>
+              <td>{selectedAnnounce.roommates_number}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Age</strong>
               </th>
               <td>
-                {announce.roommate_min_age} ans- {announce.roommate_max_age} ans
+                {selectedAnnounce.roommate_min_age} ans-{" "}
+                {selectedAnnounce.roommate_max_age} ans
               </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Status</strong>
               </th>
-              <td>{announce.status}</td>
+              <td>{selectedAnnounce.status}</td>
             </tr>
           </tbody>
         </table>
@@ -80,20 +79,20 @@ const AnnounceDescription = () => {
                 <strong>Prénom & NOM</strong>
               </th>
               <td>
-                {announce.first_name} {announce.last_name}
+                {selectedAnnounce.first_name} {selectedAnnounce.last_name}
               </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Email</strong>
               </th>
-              <td>{announce.email}</td>
+              <td>{selectedAnnounce.email}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Tél</strong>
               </th>
-              <td>{announce.phone}</td>
+              <td>{selectedAnnounce.phone}</td>
             </tr>
           </tbody>
         </table>
@@ -102,4 +101,10 @@ const AnnounceDescription = () => {
   );
 };
 
-export default AnnounceDescription;
+const mapStateToProps = (state) => {
+  return {
+    selectedAnnounce: state.selectedAnnounce,
+  };
+};
+
+export default connect(mapStateToProps)(AnnounceDescription);

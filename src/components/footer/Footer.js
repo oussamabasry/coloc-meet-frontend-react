@@ -21,7 +21,7 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold title">
               Services
             </h5>
-            <p>
+            <p  className="link-hover">
               <a
                 href="#"
                 className="sub-title"
@@ -31,7 +31,7 @@ const Footer = () => {
                 Offers
               </a>
             </p>
-            <p>
+            <p  className="link-hover">
               <a
                 href="#"
                 className="sub-title"
@@ -47,7 +47,7 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold title">
               Liens
             </h5>
-            <p>
+            <p  className="link-hover">
               <a
                 href="#"
                 className="sub-title"
@@ -57,17 +57,17 @@ const Footer = () => {
                 Accueil
               </a>
             </p>
-            <p>
+            <p className="link-hover">
               <a
                 href="#"
                 className="sub-title"
-                style={{ textDecoration: "none" }}
+              
               >
                 {" "}
                 Nos Services
               </a>
             </p>
-            <p>
+            <p  className="link-hover">
               <a
                 href="#"
                 className="sub-title"
@@ -97,7 +97,7 @@ const Footer = () => {
               {" "}
               Copyright ©2021 All rights reserved by:
               <a href="#" style={{ textDecoration: "none" }}>
-                <strong className="title"> Coloc Meet</strong>
+                <strong className="title link-hover"> Coloc Meet</strong>
               </a>
             </p>
           </div>

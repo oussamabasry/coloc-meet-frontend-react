@@ -1,17 +1,38 @@
-import React, { useState, useContext } from "react";
-import { AnnounceDetailsContext } from "../../contexts/AnnounceDetailsContext";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import "./AnnounceImages.css";
 
-const AnnounceImages = () => {
-  const announce = useContext(AnnounceDetailsContext)[0];
+const AnnounceImages = ({ selectedAnnounce }) => {
+  const [selectedImage, setSelectedImage] = useState(
+    selectedAnnounce.images[0]
+  );
 
-  const [selectedImage, setSelectedImage] = useState(announce.images[0]);
+  useEffect(() => {
+    setSelectedImage(selectedAnnounce.images[0]);
+  }, [selectedAnnounce]);
 
-  const images = announce.images.map((img, index) => {
+  const onNextClick = () => {
+    selectedAnnounce.images.map((image, index) => {
+      if (image === selectedImage) {
+        setSelectedImage(selectedAnnounce.images[(index + 1) % 4]);
+      }
+    });
+  };
+
+  const onPreviousClick = () => {
+    selectedAnnounce.images.map((image, index) => {
+      if (image === selectedImage) {
+        if (index === 0) index = 4;
+        setSelectedImage(selectedAnnounce.images[index - 1]);
+      }
+    });
+  };
+
+  const images = selectedAnnounce.images.map((img, index) => {
     return (
-      <div className="col-3" key={index}>
+      <div className="col-3 pointer" key={index}>
         <img
-         alt="Item"
+          alt="Item"
           src={img}
           onClick={() => setSelectedImage(img)}
           className="img-fluid-item"
@@ -27,14 +48,42 @@ const AnnounceImages = () => {
 
       <div className="mdb-lightbox">
         <div className="row product-gallery mx-1">
-          <div className="col-12 mb-0">
-            <figure className="view overlay rounded z-depth-1 main-img">
+          <div className="col-12 mb-3">
+            <div
+              id="carouselExampleControls"
+              className="carousel  z-depth-1-half img-fluid-selected"
+              data-interval="false"
+            >
               <img
                 src={selectedImage}
+                className="d-block img-fluid-selected z-depth-1"
                 alt="Principal"
-                className="img-fluid-selected z-depth-1"
               />
-            </figure>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+                onClick={onPreviousClick}
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                onClick={onNextClick}
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
           <div className="col-12">
             <div className="row">{images}</div>
@@ -45,4 +94,10 @@ const AnnounceImages = () => {
   );
 };
 
-export default AnnounceImages;
+const mapStateToProps = (state) => {
+  return {
+    selectedAnnounce: state.selectedAnnounce,
+  };
+};
+
+export default connect(mapStateToProps)(AnnounceImages);
