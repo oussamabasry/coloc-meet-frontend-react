@@ -9,6 +9,7 @@ const AnnounceImages = ({ selectedAnnounce }) => {
 
   useEffect(() => {
     setSelectedImage(selectedAnnounce.images[0]);
+    window.scrollTo(0, 0);
   }, [selectedAnnounce]);
 
   const onNextClick = () => {
