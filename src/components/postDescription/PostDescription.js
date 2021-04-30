@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
-import { connect } from "react-redux";
+import React from "react";
 
-const AnnounceDescription = ({ selectedAnnounce }) => {
+const PostDescription = ({ post }) => {
   const fiveStars = () => {
     const stars = [];
     let primary = "text-warning";
@@ -11,7 +10,7 @@ const AnnounceDescription = ({ selectedAnnounce }) => {
         <li className="list-inline-item" key={iteration}>
           <i
             className={`fas fa-sm fa-star ${
-              iteration <= selectedAnnounce.stars ? primary : secondary
+              iteration <= post.stars ? primary : secondary
             }`}
           ></i>
         </li>
@@ -22,17 +21,17 @@ const AnnounceDescription = ({ selectedAnnounce }) => {
 
   return (
     <div className="col-md-6">
-      <h5>{selectedAnnounce.title}</h5>
+      <h5>{post.title}</h5>
       <p className="mb-2 text-muted text-uppercase small">
-        {selectedAnnounce.city} - {selectedAnnounce.date}
+        {post.city} - {post.date}
       </p>
       {fiveStars()}
       <p>
         <span className="mr-1">
-          <strong>1000 DHS </strong>
+          <strong>{post.price} DHS </strong>
         </span>
       </p>
-      <p className="text-right pt-1">{selectedAnnounce.description}</p>
+      <p className="text-right pt-1">{post.description}</p>
       <strong>
         <h5>Conditions</h5>
       </strong>
@@ -43,28 +42,27 @@ const AnnounceDescription = ({ selectedAnnounce }) => {
               <th className="pl-0 w-50" scope="row">
                 <strong>Sexe de colocs</strong>
               </th>
-              <td>{selectedAnnounce.gender}</td>
+              <td>{post.gender}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Nombre de colocs</strong>
               </th>
-              <td>{selectedAnnounce.roommates_number}</td>
+              <td>{post.roommatesNumber}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Age</strong>
               </th>
               <td>
-                {selectedAnnounce.roommate_min_age} ans-{" "}
-                {selectedAnnounce.roommate_max_age} ans
+                {post.roommatesMinAge} ans- {post.roommatesMaxAge} ans
               </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Status</strong>
               </th>
-              <td>{selectedAnnounce.status}</td>
+              <td>{post.status}</td>
             </tr>
           </tbody>
         </table>
@@ -79,20 +77,20 @@ const AnnounceDescription = ({ selectedAnnounce }) => {
                 <strong>Prénom & NOM</strong>
               </th>
               <td>
-                {selectedAnnounce.first_name} {selectedAnnounce.last_name}
+                {post.user.firstName} {post.user.lastName}
               </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Email</strong>
               </th>
-              <td>{selectedAnnounce.email}</td>
+              <td>{post.user.email}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Tél</strong>
               </th>
-              <td>{selectedAnnounce.phone}</td>
+              <td>{post.user.phone}</td>
             </tr>
           </tbody>
         </table>
@@ -101,10 +99,4 @@ const AnnounceDescription = ({ selectedAnnounce }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedAnnounce: state.selectedAnnounce,
-  };
-};
-
-export default connect(mapStateToProps)(AnnounceDescription);
+export default PostDescription;

@@ -1,41 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
-import "./AnnounceImages.css";
+import "./PostImages.css";
 
-const AnnounceImages = ({ selectedAnnounce }) => {
+const PostImages = ({ postImages }) => {
+  const domainName = "http://localhost:8000/";
   const [selectedImage, setSelectedImage] = useState(
-    selectedAnnounce.images[0]
+    domainName + postImages[0]
   );
 
   useEffect(() => {
-    setSelectedImage(selectedAnnounce.images[0]);
-    window.scrollTo(0, 0);
-  }, [selectedAnnounce]);
+    setSelectedImage(domainName + postImages[0]);
+  }, [postImages]);
 
   const onNextClick = () => {
-    selectedAnnounce.images.map((image, index) => {
-      if (image === selectedImage) {
-        setSelectedImage(selectedAnnounce.images[(index + 1) % 4]);
+    postImages.forEach((image, index) => {
+      if (domainName + image === selectedImage) {
+        setSelectedImage(domainName + postImages[(index + 1) % 4]);
+        return;
       }
     });
   };
 
   const onPreviousClick = () => {
-    selectedAnnounce.images.map((image, index) => {
-      if (image === selectedImage) {
+    postImages.forEach((image, index) => {
+      if (domainName + image === selectedImage) {
         if (index === 0) index = 4;
-        setSelectedImage(selectedAnnounce.images[index - 1]);
+        setSelectedImage(domainName + postImages[index - 1]);
+        return;
       }
     });
   };
 
-  const images = selectedAnnounce.images.map((img, index) => {
+  const images = postImages.map((img, index) => {
     return (
       <div className="col-3 pointer" key={index}>
         <img
           alt="Item"
-          src={img}
-          onClick={() => setSelectedImage(img)}
+          src={domainName + img}
+          onClick={() => setSelectedImage(domainName + img)}
           className="img-fluid-item"
           height="600"
         />
@@ -95,10 +96,4 @@ const AnnounceImages = ({ selectedAnnounce }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    selectedAnnounce: state.selectedAnnounce,
-  };
-};
-
-export default connect(mapStateToProps)(AnnounceImages);
+export default PostImages;

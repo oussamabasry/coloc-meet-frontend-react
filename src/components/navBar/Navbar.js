@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import "./Navbar.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTimes,
-  faBars,
-  faLock,
-  faUserPlus,
-} from "@fortawesome/free-solid-svg-icons";
-library.add(faTimes, faBars, faLock, faUserPlus);
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggler, setToggler] = useState(true);
@@ -17,9 +9,9 @@ const Navbar = () => {
     <div className="navbarcomponent">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="#">
             <img className="logo" src={logo} alt="Coloc Meet" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler costmusetoggler shadow-none "
             type="button"
@@ -30,54 +22,54 @@ const Navbar = () => {
             aria-label="Toggle navigation"
             onClick={() => setToggler(!toggler)}
           >
-            <FontAwesomeIcon
+            <i
               color="#F0B90B"
-              icon={toggler ? faBars : faTimes}
-            />
+              className={`fas ${toggler ? "fa-bars" : "fa-times"} fa-2x`}
+            ></i>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="#">
                   ACCUEIL
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <Link className="nav-link " to="#">
                   OFFRES
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="#">
                   DEMANDES
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="#">
                   SERVICES
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="#">
                   CONTACTEZ NOUS
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto mb-0 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="#">
                   <i className="fas fa-user-edit"></i> CREER UN COMPTE
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link"
                   data-mdb-toggle="modal"
                   data-mdb-target="#staticBackdrop"
-                  href="#"
+                  to="#"
                 >
                   <i className="fas fa-lock"></i> SE CONNECTER
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
