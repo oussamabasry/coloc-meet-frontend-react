@@ -55,7 +55,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <ul className="navbar-nav ml-auto mb-0 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-0 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="#">
                   <i className="fas fa-user-edit"></i> CREER UN COMPTE
