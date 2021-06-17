@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,25 +21,25 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold title">
               Services
             </h5>
-            <p className="link-hover">
-              <Link
-                to="#"
+            <p  className="link-hover">
+              <a
+                href="#"
                 className="sub-title"
                 style={{ textDecoration: "none" }}
               >
                 {" "}
                 Offers
-              </Link>
+              </a>
             </p>
-            <p className="link-hover">
-              <Link
-                to="#"
+            <p  className="link-hover">
+              <a
+                href="#"
                 className="sub-title"
                 style={{ textDecoration: "none" }}
               >
                 {" "}
                 Demandes
-              </Link>
+              </a>
             </p>
           </div>
 
@@ -48,30 +47,34 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold title">
               Liens
             </h5>
-            <p className="link-hover">
-              <Link
-                to="#"
+            <p  className="link-hover">
+              <a
+                href="#"
                 className="sub-title"
                 style={{ textDecoration: "none" }}
               >
                 {" "}
                 Accueil
-              </Link>
+              </a>
             </p>
             <p className="link-hover">
-              <Link to="#" className="sub-title">
+              <a
+                href="#"
+                className="sub-title"
+              
+              >
                 {" "}
                 Nos Services
-              </Link>
+              </a>
             </p>
-            <p className="link-hover">
-              <Link
-                to="#"
+            <p  className="link-hover">
+              <a
+                href="#"
                 className="sub-title"
                 style={{ textDecoration: "none" }}
               >
                 Contactez Nous
-              </Link>
+              </a>
             </p>
           </div>
 
@@ -93,9 +96,9 @@ const Footer = () => {
             <p>
               {" "}
               Copyright ©2021 All rights reserved by:
-              <Link to="#" style={{ textDecoration: "none" }}>
+              <a href="#" style={{ textDecoration: "none" }}>
                 <strong className="title link-hover"> Coloc Meet</strong>
-              </Link>
+              </a>
             </p>
           </div>
 
@@ -103,49 +106,49 @@ const Footer = () => {
             <div className="text-center text-md-right">
               <ul className="list-unstyled list-inline">
                 <li className="list-inline-item">
-                  <Link
-                    to="#"
+                  <a
+                    href="#"
                     className="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
                     <i className="fab fa-facebook-f icons-color"></i>
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-inline-item">
-                  <Link
-                    to="#"
+                  <a
+                    href="#"
                     className="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
                     <i className="fab fa-twitter icons-color"></i>
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-inline-item">
-                  <Link
-                    to="#"
+                  <a
+                    href="#"
                     className="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
                     <i className="fab fa-google-plus icons-color"></i>
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-inline-item">
-                  <Link
-                    to="#"
+                  <a
+                    href="#"
                     className="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
                     <i className="fab fa-linkedin-in icons-color"></i>
-                  </Link>
+                  </a>
                 </li>
                 <li className="list-inline-item">
-                  <Link
-                    to="#"
+                  <a
+                    href="#"
                     className="btn-floating btn-sm text-white"
                     style={{ fontSize: "23px" }}
                   >
                     <i className="fab fa-youtube icons-color"></i>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

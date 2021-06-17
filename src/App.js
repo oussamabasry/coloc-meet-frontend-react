@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navBar/Navbar";
 import Footer from "./components/footer/Footer";
-import PostDetialsPage from "./pages/PostDetialsPage";
-import { BrowserRouter, Route } from "react-router-dom";
-
+import ListeAnnoncesPage from "./pages/ListeAnnoncesPage";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Route path="/announce-details/:postId" component={PostDetialsPage} />
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <ListeAnnoncesPage/>
+      <Footer />
     </div>
   );
 }
