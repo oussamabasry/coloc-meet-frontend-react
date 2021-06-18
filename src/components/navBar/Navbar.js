@@ -57,7 +57,7 @@ const Navbar = () => {
             </ul>
             <ul className="navbar-nav me-auto mb-0 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/signup">
                   <i className="fas fa-user-edit"></i> CREER UN COMPTE
                 </Link>
               </li>

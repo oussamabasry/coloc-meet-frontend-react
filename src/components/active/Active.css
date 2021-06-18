@@ -1,0 +1,46 @@
+.topp{
+    display: flex;
+    margin-top: 100px;
+    height: 600px;
+    background-color: #40bbbb;
+}
+
+.svg{
+    flex: 0.4;
+    
+}
+@media all and  (max-width: 401px) {
+    .svg{
+        display: none;
+    }
+    .ec .e {
+        font-size: 26px;
+        margin-inline: 50px;
+    }
+    .ec .btn{
+        max-width: 270px;
+        margin-inline: 40px;
+    }
+    .topp{
+        height: 800px;
+    }
+}
+
+@media all and  (min-width: 401px) and (max-width: 1240px){
+    .svg{
+        display: none;
+    }
+    .topp{
+        height: 740px;
+    }
+    .ec{
+        margin-inline: 100px;
+    }
+}
+.ec{
+    flex: 0.6;
+}
+.ec > h1 {
+    font-size: 36px;
+    text-align: start;
+}

@@ -1,0 +1,17 @@
+.card-img-top {
+  height: 190px;
+}
+.btni {
+  display: flex;
+  justify-content: space-around;
+}
+.imog {
+  width: 34px;
+  height: 38px;
+}
+
+.car {
+  width: 365px;
+  margin-inline: -3px;
+  border: 1px dotted black;
+}
