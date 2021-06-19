@@ -33,27 +33,30 @@ const PostDescription = ({ post }) => {
       </p>
       <p className="text-right pt-1">{post.description}</p>
       <strong>
-        <h5>Conditions</h5>
+        <h4 className="mb-3">Conditions</h4>
       </strong>
-      <div className="table-responsive">
-        <table className="table table-sm table-borderless mb-0">
+      <div >
+        <table>
           <tbody>
             <tr>
               <th className="pl-0 w-50" scope="row">
                 <strong>Sexe de colocs</strong>
               </th>
+              <td>&nbsp;&nbsp;&nbsp;</td>
               <td>{post.gender}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Nombre de colocs</strong>
               </th>
+              <td>&nbsp;</td>
               <td>{post.roommatesNumber}</td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Age</strong>
               </th>
+              <td>&nbsp;</td>
               <td>
                 {post.roommatesMinAge} ans- {post.roommatesMaxAge} ans
               </td>
@@ -62,15 +65,16 @@ const PostDescription = ({ post }) => {
               <th className="pl-0 w-25" scope="row">
                 <strong>Status</strong>
               </th>
+              <td>&nbsp;</td>
               <td>{post.status}</td>
             </tr>
           </tbody>
         </table>
       </div>
       <hr />
-      <h5>Contact Informations</h5>
-      <div className="table-responsive">
-        <table className="table table-sm table-borderless mb-0">
+      <h4>Contact Informations</h4>
+      <div>
+        <table>
           <tbody>
             <tr>
               <th className="pl-0 w-50" scope="row">
