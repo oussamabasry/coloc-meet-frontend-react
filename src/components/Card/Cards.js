@@ -1,9 +1,18 @@
-import React from "react";
+import React , {useEffect} from "react";
 import * as mdb from "mdb-ui-kit"; // lib
 import { Input } from "mdb-ui-kit"; // module
 import "./Cards.css"
+import { getPost } from "../../action/Action";
 
+import {useSelector,useDispatch} from 'react-redux'
 function Cards() {
+  const dispatch = useDispatch();
+
+  const p = useSelector((state) => state.post);
+  useEffect(() => {
+    dispatch(getPost());
+  }, [dispatch]);
+  
   const obj = {
     price: "2500 DH/mois",
     surface: "20 m²",
@@ -21,23 +30,23 @@ function Cards() {
     cards: Array(15).fill(obj)
   };
 
-  
+  console.log(p.post)
 
-  const cardsTwo = data.cards.map(card => (
+  const cardsTwo = p.post && p.post.map(card => (
     <div className="col-12 col-md-6 col-lg-4 col-sm-12">
     <div className="card m-2" >
       <a href="#">
-      <img src="https://www.immojeune.com/uploads/housing/1200x800/52d6d9d09d1279fb8379a57ab76dbd74e6b88f2c-1200x800.jpeg?timestamp=1620365832" className="card-img-top" alt="..." /></a>
+      <img src={`http://localhost:8000/${card.postImages}`} className="card-img-top" alt="..." /></a>
       <div className="card-body">
         <div className="flex">
         <a href="#"><p className="card-text">{card.title}</p></a>
         <p className="property-type">{card.type}</p>
         </div>
         <div className="flex">
-          <div className="price-adress">
-            <h5 className="">{card.surface} - {card.price}</h5>
+          <div className="price-adress"> 
+            <h5 style={{marginTop:"10px"}} className=""> {card.price} Dh/Mois</h5>
             <div className>
-              <img src="https://www.immojeune.com//img/icon-location.svg" alt="Ville" /> {card.adress}
+              <img src="https://www.immojeune.com//img/icon-location.svg" alt="Ville" /> {card.city} 
             </div>
             
           </div>

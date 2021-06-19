@@ -41,11 +41,13 @@ export default function PostPage() {
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">Post</th>
-                <th scope="col">City</th>
-                <th scope="col">street</th>
-                <th scope="col">price </th>
-                <th scope="col">star </th>
+                <th scope="col"><strong>Post</strong></th>
+                <th scope="col"><strong>Title</strong></th>
+                <th scope="col"><strong>City</strong></th>
+                <th scope="col"><strong>Price</strong> </th>
+                <th scope="col"><strong>Stars</strong> </th>
+                <th scope="col"> </th>
+                <th scope="col"> </th>
               </tr>
             </thead>
 
