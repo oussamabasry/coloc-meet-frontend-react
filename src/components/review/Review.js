@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import serverApi from "../../apis/serverApi";
+import { Link } from "react-router-dom";
 import City from "../city/City";
 import CardHome from "../cardHome/CardHome";
 import Active from "../active/Active";
@@ -19,7 +20,7 @@ export default function Review() {
   const filtrePosts = posts.filter((item) => {
     return item.stars >= 4;
   });
-  
+
   const getPost = filtrePosts.map((item) => <CardHome props={item} />);
 
   return (
@@ -34,13 +35,15 @@ export default function Review() {
               so register now in Student-life to benefit from all these options
             </p>
             <br />
-            <button
-              type="button"
-              style={{ width: "320px" }}
-              className="btn btn-block btn-primary"
-            >
-              Sign-UP
-            </button>
+            <Link to="/signup">
+              <button
+                type="button"
+                style={{ width: "320px" }}
+                className="btn btn-block btn-primary"
+              >
+                Sign-UP
+              </button>
+            </Link>
           </div>
           <div className="sv">
             <svg

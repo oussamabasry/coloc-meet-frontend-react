@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Active.css";
 export default function Active() {
   return (
@@ -272,7 +273,7 @@ export default function Active() {
             {" "}
             <div className="e" style={{ marginTop: "120px" }}>
               {" "}
-              Finding student accommodation <br /> 
+              Finding student accommodation <br />
             </div>
             <div style={{ marginTop: "30px" }}>is easy on Colocmeet</div>
           </strong>
@@ -284,20 +285,24 @@ export default function Active() {
             <li>I get an answer quickly</li>
           </ol>{" "}
           <div style={{ display: "block" }} className="bt">
-            <button
-              style={{ fontSize: "16px", width: "400px" }}
-              type="button"
-              className="btn btn-block btn-dark"
-            >
-              post a room
-            </button>
-            <button
-              style={{ fontSize: "16px", width: "400px" }}
-              type="button"
-              className="btn btn-block btn-light"
-            >
-              Reserve a room
-            </button>
+            <Link to="/signup">
+              <button
+                style={{ fontSize: "16px", width: "400px" }}
+                type="button"
+                className="btn btn-block btn-dark"
+              >
+                post a room
+              </button>
+            </Link>
+            <Link to="/announces">
+              <button
+                style={{ fontSize: "16px", width: "400px" }}
+                type="button"
+                className="btn btn-block btn-light"
+              >
+                Reserve a room
+              </button>
+            </Link>
           </div>
         </div>
       </div>

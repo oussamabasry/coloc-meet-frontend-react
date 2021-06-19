@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="navbarcomponent">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             <img className="logo" src={logo} alt="Coloc Meet" />
           </Link>
           <button
@@ -30,17 +30,17 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   ACCUEIL
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="#">
+                <Link className="nav-link " to="/announces">
                   OFFRES
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/announces">
                   DEMANDES
                 </Link>
               </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto mb-0 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/signup">
-                  <i className="fas fa-user-edit"></i> CREER UN COMPTE
+                  <i className="fas fa-user-edit"></i> SE CONNECTER
                 </Link>
               </li>
               <li className="nav-item">
@@ -66,9 +66,9 @@ const Navbar = () => {
                   className="nav-link"
                   data-mdb-toggle="modal"
                   data-mdb-target="#staticBackdrop"
-                  to="#"
+                  to="/signin"
                 >
-                  <i className="fas fa-lock"></i> SE CONNECTER
+                  <i className="fas fa-lock"></i>  CREER UN COMPTE
                 </Link>
               </li>
             </ul>

@@ -20,13 +20,13 @@ export function LoginForm(props) {
         <Input type="password" placeholder="Password" />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <MutedLink href="#">Forget your password?</MutedLink>
+      <MutedLink href="">Forget your password?</MutedLink>
       <Marginer direction="vertical" margin="1.6em" />
       <SubmitButton type="submit">Sign in</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
-      <MutedLink href="#">
+      <MutedLink>
         Don't have an account ?{" "}
-        <BoldLink href="#" onClick={switchToSignup}>
+        <BoldLink href="" onClick={switchToSignup}>
           Sign up
         </BoldLink>
       </MutedLink>

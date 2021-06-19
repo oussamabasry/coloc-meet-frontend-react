@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+}
+
+.voir-btn {
+  /* margin-left :px ; */
+  height: 40px;
+  width: 80px;
+}
+
+.all-cards {
+  /* margin: 0px 15px; */
+}
+
+h5 {
+  width : 210px;
+}
+
+p.property-type {
+  margin-left : 10px;
+}
+
+.pagination-navbar {
+  background:tomato;
+  width: 60%;
+  justify-content: center;
+  margin: 0px auto;
+}
