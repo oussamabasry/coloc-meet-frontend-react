@@ -36,29 +36,29 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link " to="/announces">
-                  OFFRES
+                  ANNOUNCES
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/announces">
-                  DEMANDES
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/services">
                   SERVICES
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">
+                <Link className="nav-link" to="/contactas">
                   CONTACTEZ NOUS
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/team">
+                  TEAM
+                </Link>
+              </li>
             </ul>
-            <ul className="navbar-nav me-auto mb-0 mb-lg-0">
+            <ul className="navbar-nav  mb-0 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/signup">
-                  <i className="fas fa-user-edit"></i> SE CONNECTER
+                  <i className="fas fa-lock"></i> SE CONNECTER
                 </Link>
               </li>
               <li className="nav-item">
@@ -68,7 +68,7 @@ const Navbar = () => {
                   data-mdb-target="#staticBackdrop"
                   to="/signin"
                 >
-                  <i className="fas fa-lock"></i>  CREER UN COMPTE
+                  <i className="fas fa-user-edit"></i> CREER UN COMPTE
                 </Link>
               </li>
             </ul>

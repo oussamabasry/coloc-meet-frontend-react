@@ -37,12 +37,7 @@ const BackDrop = styled(motion.div)`
   transform: rotate(60deg);
   top: -290px;
   left: -70px;
-  background: rgb(122, 183, 242);
-  background: linear-gradient(
-    58deg,
-    rgba(122, 183, 242, 1) 20%,
-    rgba(124, 159, 245, 1) 100%
-  );
+  background: rgb(33, 70, 108);
 `;
 
 const HeaderContainer = styled.div`
@@ -126,34 +121,32 @@ export function AccountBox(props) {
 
   return (
     <div className="box-title">
-    <AccountContext.Provider value={contextValue}>
-      <BoxContainer>
-        <TopContainer>
-          <BackDrop
-            initial={false}
-            animate={isExpanded ? "expanded" : "collapsed"}
-            variants={backdropVariants}
-            transition={expandingTransition}
-          />
-          {active === "signin" && (
-            <HeaderContainer>
-              <HeaderText>Welcome !</HeaderText>
-              <SmallText>Please sign-in to continue!</SmallText>
-            </HeaderContainer>
-          )}
-          {active === "signup" && (
-            <HeaderContainer>
-              <HeaderText>Create Account </HeaderText>
-              <SmallText>Please sign-up to continue!</SmallText>
-            </HeaderContainer>
-          )}
-        </TopContainer>
-        <InnerContainer>
-          {active === "signin" && <LoginForm />}
-          {active === "signup" && <SignupForm />}
-        </InnerContainer>
-      </BoxContainer>
-    </AccountContext.Provider>
+      <AccountContext.Provider value={contextValue}>
+        <BoxContainer>
+          <TopContainer>
+            <BackDrop
+              initial={false}
+              animate={isExpanded ? "expanded" : "collapsed"}
+              variants={backdropVariants}
+              transition={expandingTransition}
+            />
+            {active === "signin" && (
+              <HeaderContainer>
+                <HeaderText>Connexion</HeaderText>
+              </HeaderContainer>
+            )}
+            {active === "signup" && (
+              <HeaderContainer>
+                <HeaderText>Créer un compte </HeaderText>
+              </HeaderContainer>
+            )}
+          </TopContainer>
+          <InnerContainer>
+            {active === "signin" && <LoginForm />}
+            {active === "signup" && <SignupForm />}
+          </InnerContainer>
+        </BoxContainer>
+      </AccountContext.Provider>
     </div>
   );
 }

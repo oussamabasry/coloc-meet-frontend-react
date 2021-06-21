@@ -273,16 +273,24 @@ export default function Active() {
             {" "}
             <div className="e" style={{ marginTop: "120px" }}>
               {" "}
-              Finding student accommodation <br />
+              Trouver un logement étudiant <br />
             </div>
-            <div style={{ marginTop: "30px" }}>is easy on Colocmeet</div>
+            <div style={{ marginTop: "30px" }}>est facile sur Colocmeet</div>
           </strong>
+          <br />
           <ol style={{ color: "white", fontSize: "22px", marginTop: "14px" }}>
-            <li>create an account and complete my rental file online</li>
+            <li>
+              Créer un compte et compléter mon dossier de colocation en ligne
+            </li>
             <br />
-            <li>looking for a housing offer and candidate in 1 click</li>
             <br />
-            <li>I get an answer quickly</li>
+            <li>
+              Rechercher une offre de logement et un candidat en 1 clic
+            </li>
+            <br />
+            <br />
+            <li>Reçevoir une réponse rapidement</li>
+            <br/>
           </ol>{" "}
           <div style={{ display: "block" }} className="bt">
             <Link to="/signup">
@@ -291,16 +299,17 @@ export default function Active() {
                 type="button"
                 className="btn btn-block btn-dark"
               >
-                post a room
+                poster une chambre
               </button>
             </Link>
+            <br />
             <Link to="/announces">
               <button
-                style={{ fontSize: "16px", width: "400px" }}
+                style={{ fontSize: "16px", width: "400px", marginTop: "-10px" }}
                 type="button"
                 className="btn btn-block btn-light"
               >
-                Reserve a room
+                Réserver une chambre
               </button>
             </Link>
           </div>

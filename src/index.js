@@ -5,10 +5,26 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "semantic-ui-css/semantic.min.css";
+import reducers from "./reducers/index";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import api from "./apis/serverApi";
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+let store = createStore(reducers, composeEnhancer(applyMiddleware(thunk)));
+
+const user = JSON.parse(localStorage.getItem("userData"));
+
+if (user !== null) {
+  api.defaults.headers.common["Authorization"] = `Bearer ${user.token}`;
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

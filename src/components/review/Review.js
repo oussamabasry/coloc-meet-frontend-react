@@ -29,10 +29,10 @@ export default function Review() {
         <div className="si">
           <div className="sign">
             <h1 style={{ color: "black", fontFamily: "serif" }}>
-              Do you have accommodation to share or are you looking for it{" "}
+            Vous avez un logement à partager ou vous le recherchez{" "}
             </h1>
             <p style={{ color: "black", fontFamily: "Georgia,serif" }}>
-              so register now in Student-life to benefit from all these options
+            alors inscrivez-vous dès maintenant dans Coloc Meet pour bénéficier de toutes ces options
             </p>
             <br />
             <Link to="/signup">
@@ -41,7 +41,7 @@ export default function Review() {
                 style={{ width: "320px" }}
                 className="btn btn-block btn-primary"
               >
-                Sign-UP
+               S'inscrire
               </button>
             </Link>
           </div>
@@ -230,7 +230,7 @@ export default function Review() {
             }}
           >
             {" "}
-            Discover the cities :
+            Découvrez les villes :
           </h2>
         </div>
         <div className="av">
@@ -243,7 +243,7 @@ export default function Review() {
               fontFamily: "serif",
             }}
           >
-            Our service is available in{" "}
+           Notre service est disponible en{" "}
           </h2>
         </div>
 
@@ -265,7 +265,7 @@ export default function Review() {
             fontFamily: "Georgia, serif",
           }}
         >
-          Top Rated Rooms :
+         Chambres les mieux notées :
         </h2>
       </div>
       <br />

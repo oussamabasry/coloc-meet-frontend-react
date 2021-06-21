@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 const PostDescription = ({ post }) => {
   const fiveStars = () => {
@@ -22,8 +23,8 @@ const PostDescription = ({ post }) => {
   return (
     <div className="col-md-6">
       <h5>{post.title}</h5>
-      <p className="mb-2 text-muted text-uppercase small">
-        {post.city} - {post.date}
+      <p className="mb-2 text-muted">
+        {post.city} - {moment(post.date).format("MMMM Do YYYY, h:mm:ss a")}
       </p>
       {fiveStars()}
       <p>
@@ -35,7 +36,7 @@ const PostDescription = ({ post }) => {
       <strong>
         <h4 className="mb-3">Conditions</h4>
       </strong>
-      <div >
+      <div>
         <table>
           <tbody>
             <tr>

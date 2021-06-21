@@ -2,8 +2,6 @@
 import axios from 'axios'
 
 
-const url ='http://localhost:8000/'
-
 export const createpost =(ne) =>{
    return axios.post("http://localhost:8000/add",ne)
 }
