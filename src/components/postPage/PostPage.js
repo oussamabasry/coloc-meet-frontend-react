@@ -3,6 +3,7 @@ import axios from "axios";
 import Table from "../tablePost/TablePost";
 import Form from "../FormPost/FormPost";
 import Card from "../mobileCard/MobileCard";
+import Sidebar from "../sidebar/Sidebar"
 
 import "./Postpage.css";
 
@@ -32,20 +33,25 @@ export default function PostPage() {
   return (
     <div className="postpage">
       ,
-      <h1 style={{ fontFamily: "serif", fontSize: "37px" }}>
-        You can post , update and delete your Posts
+      <h1 style={{ color:"black",fontFamily: "serif", fontSize: "37px",marginInline:"300px" }}>
+        Vous pouvez créer , modifier et supprimer vos postes
       </h1>
       <div className="all">
+        <div style={{ backgroundColor:"black"}} className="sideba">
+          <Sidebar  style={{ backgroundColor:"black"}}/>
+
+         
+        </div>
         <div className="tabl">
           <table className="table ">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col"><strong>Post</strong></th>
-                <th scope="col"><strong>Title</strong></th>
-                <th scope="col"><strong>City</strong></th>
-                <th scope="col"><strong>Price</strong> </th>
-                <th scope="col"><strong>Stars</strong> </th>
+                <th scope="col"><strong>Poste</strong></th>
+                <th scope="col"><strong>Titre</strong></th>
+                <th scope="col"><strong>Ville</strong></th>
+                <th scope="col"><strong>Prix</strong> </th>
+                <th scope="col"><strong>étoiles</strong> </th>
                 <th scope="col"> </th>
                 <th scope="col"> </th>
               </tr>

@@ -277,14 +277,16 @@ export default function Active() {
             </div>
             <div style={{ marginTop: "30px" }}>is easy on Colocmeet</div>
           </strong>
-          <ol style={{ color: "white", fontSize: "22px", marginTop: "14px" }}>
-            <li>create an account and complete my rental file online</li>
-            <br />
+          <br />
+          <ol style={{ color: "white", fontSize: "23px", marginTop: "14px" }}>
+            <li>create an account and complete my rental file on line</li>
+            <br /> <br />
             <li>looking for a housing offer and candidate in 1 click</li>
-            <br />
+            <br /> <br />
             <li>I get an answer quickly</li>
           </ol>{" "}
           <div style={{ display: "block" }} className="bt">
+            <br />
             <Link to="/signup">
               <button
                 style={{ fontSize: "16px", width: "400px" }}
@@ -294,9 +296,10 @@ export default function Active() {
                 post a room
               </button>
             </Link>
+            <br />
             <Link to="/announces">
               <button
-                style={{ fontSize: "16px", width: "400px" }}
+                style={{ marginTop:"-10px" ,fontSize: "16px", width: "400px" }}
                 type="button"
                 className="btn btn-block btn-light"
               >

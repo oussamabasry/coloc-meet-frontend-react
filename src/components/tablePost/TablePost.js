@@ -22,7 +22,7 @@ export default function TablePost({ info }) {
           {" "}
           <img
             style={{ height: "60px", width: "100px" }}
-            src={`http://localhost:8000/${info.postImages}`}
+            src={`http://localhost:8000/${info.postImages[0]}`}
             alt=""
           />
         </td >
@@ -79,7 +79,7 @@ export default function TablePost({ info }) {
           <button
             onClick={() => remov(info._id)}
             type="button"
-            style={{ height: "32px",width:"61px" }}
+            style={{ height: "32px",width:"61px" ,marginInline:"-10px"}}
             class="btn btn-outline-danger btn-sm px-3"
           >
             
@@ -98,6 +98,16 @@ export default function TablePost({ info }) {
               />
             </svg>
           </button>
+          <button
+              onClick={handleShow}
+              type="button"
+              className="btn btn-primary"
+              style={{marginInline:"32px",height:"33px"}}
+            >
+              
+              {" "}
+             Plus d'infos
+            </button>
         </td>
       </tr>
     </tbody>

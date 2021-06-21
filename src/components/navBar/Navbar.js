@@ -36,14 +36,10 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link " to="/announces">
-                  OFFRES
+                  ANNONCES
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/announces">
-                  DEMANDES
-                </Link>
-              </li>
+             
               <li className="nav-item">
                 <Link className="nav-link" to="#">
                   SERVICES
@@ -54,8 +50,13 @@ const Navbar = () => {
                   CONTACTEZ NOUS
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="#">
+                 TEAM
+                </Link>
+              </li>
             </ul>
-            <ul className="navbar-nav me-auto mb-0 mb-lg-0">
+            <ul className="navbar-nav  mb-0 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" to="/signup">
                   <i className="fas fa-user-edit"></i> SE CONNECTER

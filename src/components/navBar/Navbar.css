@@ -3,6 +3,7 @@
 .logo {
   width: 150px;
   height: 60px;
+  margin-inline: 200px;
 }
 
 @media only screen and (max-width: 992px) {

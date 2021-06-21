@@ -13,15 +13,20 @@ export default function EditPost({ postid, postt }) {
 
   const dispatch = useDispatch();
 
+  const [title, setTitle] = useState("");
   const [city, setCity] = useState("");
   const [prix, setPrix] = useState(0);
   const [article, setArticle] = useState("");
-  const [star, setStar] = useState("");
+  const [star, setStar] = useState(0);
   const [description, setDescription] = useState("");
-  const [street, setStreet] = useState("");
+  const [status, setStatus] = useState("");
+  const [gender, setGender] = useState("");
+  const [roomate, setRoomate] = useState(0);
+  const [maxage, setMaxage] = useState(0);
+  const [minage, setMinage] = useState(0);
 
   const handlfile = (e) => {
-    setArticle(e.target.files[0]);
+    setArticle(e.target.files);
   };
   console.log(article);
   const sub = (e) => {
@@ -29,13 +34,25 @@ export default function EditPost({ postid, postt }) {
     const formData = new FormData();
 
     formData.append("city", city);
-    formData.append("prix", prix);
+    formData.append("price", prix);
+    formData.append("title", title);
 
-    formData.append("article", article);
-    formData.append("street", street);
+    formData.append("postImages", article[0]);
+    formData.append("postImages", article[1]);
+    formData.append("postImages", article[2]);
+    formData.append("postImages", article[3]);
+    
+  
     formData.append("description", description);
-    formData.append("star", star);
+    formData.append("stars", star);
 
+    formData.append("status", status);
+    formData.append("gender", gender);
+
+    formData.append("roommatesNumber", roomate);
+    formData.append("roommatesMinAge", maxage);
+    formData.append("roommatesMaxAge", minage);
+    
     dispatch(updatePost(postid, formData));
     toastr.info("Post Updated succecfully");
 
@@ -47,150 +64,299 @@ axios.post('http://localhost:8000/add',formData)
   };
   return (
     <div>
-      <form onSubmit={sub} encType="multipart/form-data" className="ff">
-        <label
+      <form style={{marginTop:"-15px"}} onSubmit={sub} encType="multipart/form-data" className="ff">
+      <div className="row">
+
+<div className="col-md-6">
+
+
+
+  <label
+  style={{
+    marginInline: "10px",
+    marginBottom: "6px",
+    fontSize: "14px",
+  }}
+  htmlFor=""
+>
+  Title
+</label>
+<input
+  value={title}
+  style={{
+    width: "210px",
+    marginInline: "9px",
+    border: "1px solid black",
+    height: "40px",
+  }}
+  onChange={(e) => setTitle(e.target.value)}
+  id="city"
+  type="text"
+  className="form-control"
+/>
+   </div>
+   <div className="col-md-6">
+  <label
+  style={{
+    marginInline: "10px",
+    marginBottom: "8px",
+    fontSize: "14px",
+  }}
+  htmlFor=""
+>
+  City
+</label>
+<input
+  value={city}
+  style={{
+    width: "210px",
+    marginInline: "9px",
+    border: "1px solid black",
+    height: "40px",
+  }}
+  onChange={(e) => setCity(e.target.value)}
+  id="city"
+  type="text"
+  className="form-control"
+/>
+   </div>
+   </div>
+
+
+   <div className="row">
+
+<div className="col-md-6">
+
+
+
+          <label
           style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
+          marginInline: "10px",
+          marginBottom: "8px",
+          fontSize: "14px",
           }}
           htmlFor=""
-        >
-          <strong>City</strong>{" "}
-        </label>
-        <input
-          value={city}
+          >
+          Gender
+          </label>
+          <input
+          value={gender}
           style={{
-            width: "300px",
-            marginInline: "79px",
-            border: "1px solid black",
-            height: "40px",
+          width: "210px",
+          marginInline: "9px",
+          border: "1px solid black",
+          height: "40px",
           }}
-          onChange={(e) => setCity(e.target.value)}
+          onChange={(e) => setGender(e.target.value)}
           id="city"
           type="text"
           className="form-control"
-        />
-
-        <label
+          />
+          </div>
+          <div className="col-md-6">
+          <label
           style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
+          marginInline: "10px",
+          marginBottom: "8px",
+          fontSize: "14px",
           }}
           htmlFor=""
-        >
-          <strong>Street</strong>
-        </label>
-        <input
-          value={street}
+          >
+          Status
+          </label>
+          <input
+          value={status}
           style={{
-            width: "300px",
-            marginInline: "79px",
-            border: "1px solid black",
-            height: "40px",
+          width: "210px",
+          marginInline: "9px",
+          border: "1px solid black",
+          height: "40px",
           }}
-          onChange={(e) => setStreet(e.target.value)}
+          onChange={(e) => setStatus(e.target.value)}
           id="city"
           type="text"
           className="form-control"
-        />
+          />
+          </div>
+          </div>
 
-        <label
+
+          <label
+            style={{
+              marginInline: "10px",
+              marginBottom: "8px",
+              fontSize: "14px",
+            }}
+            htmlFor=""
+          >
+            Description
+          </label> 
+          <br />
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            style={{ marginInline: "33px" }}
+            name=""
+            cols="54"
+            rows="5"
+          ></textarea>
+          <div className="row"></div>
+
+          <div className="row">
+
+          <div className="col-md-6">
+
+
+
+          <label
           style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
+          marginInline: "10px",
+          marginBottom: "6px",
+          fontSize: "14px",
           }}
           htmlFor=""
-        >
-          <strong>Description</strong>
-        </label>
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          style={{ marginInline: "79px" }}
-          name=""
-          cols="46"
-          rows="5"
-        ></textarea>
-
-        <br />
-        <label
+          >
+          Roomate Min Age
+          </label>
+          <input
+          value={minage}
           style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
+          width: "210px",
+          marginInline: "9px",
+          border: "1px solid black",
+          height: "40px",
           }}
-          htmlFor=""
-        >
-          <strong>prix</strong>
-        </label>
-        <input
-          value={prix}
-          style={{
-            width: "300px",
-            marginInline: "79px",
-            border: "1px solid black",
-            height: "40px",
-          }}
-          onChange={(e) => setPrix(e.target.value)}
+          onChange={(e) => setMinage(e.target.value)}
+          id="city"
           type="text"
           className="form-control"
-        />
-        <br />
-        <label
+          />
+          </div>
+          <div className="col-md-6">
+          <label
           style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
+          marginInline: "10px",
+          marginBottom: "8px",
+          fontSize: "14px",
           }}
           htmlFor=""
-        >
-          <strong>Number of Star</strong>
-        </label>
-        <input
-          value={star}
+          >
+          Roomate Max Age
+          </label>
+          <input
+          value={maxage}
           style={{
-            width: "300px",
-            marginInline: "79px",
-            border: "1px solid black",
-            height: "40px",
+          width: "210px",
+          marginInline: "9px",
+          border: "1px solid black",
+          height: "40px",
           }}
-          onChange={(e) => setStar(e.target.value)}
+          onChange={(e) => setMaxage(e.target.value)}
+          id="city"
           type="text"
           className="form-control"
-        />
+          />
+          </div>
+          </div>
+          <label
+            style={{
+              marginInline: "86px",
+              marginBottom: "8px",
+              fontSize: "14px",
+            }}
+            htmlFor=""
+          >
+          Roomate Number
+          </label>
+          <input
+            value={roomate}
+            style={{
+              width: "300px",
+              marginInline: "86px",
+              border: "1px solid black",
+              height: "40px",
+            }}
+            onChange={(e) => setRoomate(e.target.value)}
+            type="text"
+            className="form-control"
+          />
 
-        <br />
-        <label
-          style={{
-            marginInline: "60px",
-            marginBottom: "8px",
-            fontSize: "14px",
-          }}
-          htmlFor=""
-        >
-          <strong>Image</strong>
-        </label>
+          <label
+            style={{
+              marginInline: "86px",
+              marginBottom: "8px",
+              fontSize: "14px",
+            }}
+            htmlFor=""
+          >
+            prix
+          </label>
+          <input
+            value={prix}
+            style={{
+              width: "300px",
+              marginInline: "86px",
+              border: "1px solid black",
+              height: "40px",
+            }}
+            onChange={(e) => setPrix(e.target.value)}
+            type="text"
+            className="form-control"
+          />
 
-        <input
-          style={{ marginInline: "79px" }}
-          type="file"
-          filename="article"
-          onChange={handlfile}
-        />
-        <br />
-        <br />
-        <br />
-        <button
-          type="submit"
-          style={{ width: "420px", marginInline: "28px" }}
-          className="btn btn-block btn-dark"
-        >
-          Update Post
-        </button>
-      </form>
-    </div>
-  );
-}
+          <label
+            style={{
+              marginInline: "86px",
+              marginBottom: "8px",
+              fontSize: "14px",
+            }}
+            htmlFor=""
+          >
+            Number of Star
+          </label>
+          <input
+            value={star}
+            style={{
+              width: "300px",
+              marginInline: "86px",
+              border: "1px solid black",
+              height: "40px",
+            }}
+            onChange={(e) => setStar(e.target.value)}
+            type="text"
+            className="form-control"
+          />
+
+          <br />
+          <label
+            style={{
+              marginInline: "10px",
+              marginBottom: "8px",
+              fontSize: "14px",
+            }}
+            htmlFor=""
+          >
+            Image
+          </label>
+
+          <input
+            style={{ marginInline: "17px" }}
+            type="file"
+            filename="article"
+            onChange={handlfile}
+            multiple
+          />
+          <br />
+          <br />
+                  <br />
+                  <button
+                    type="submit"
+                    style={{marginTop:"-27px", height:"44px", width: "420px", marginInline: "28px" }}
+                    className="btn btn-block btn-dark"
+                  >
+                    Update Post
+                  </button>
+                </form>
+              </div>
+            );
+          }

@@ -36,7 +36,7 @@ function Cards() {
     <div className="col-12 col-md-6 col-lg-4 col-sm-12">
     <div className="card m-2" >
       <a href="#">
-      <img src={`http://localhost:8000/${card.postImages}`} className="card-img-top" alt="..." /></a>
+      <img src={`http://localhost:8000/${card.postImages[0]}`} className="card-img-top" alt="..." /></a>
       <div className="card-body">
         <div className="flex">
         <a href="#"><p className="card-text">{card.title}</p></a>

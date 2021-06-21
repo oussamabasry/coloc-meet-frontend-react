@@ -14,7 +14,7 @@ export default function FormPost() {
   const [title, setTitle] = useState("");
   const [city, setCity] = useState("");
   const [prix, setPrix] = useState(0);
-  const [article, setArticle] = useState("");
+  const [article, setArticle] = useState([]);
   const [star, setStar] = useState(0);
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
@@ -23,10 +23,19 @@ export default function FormPost() {
   const [maxage, setMaxage] = useState(0);
   const [minage, setMinage] = useState(0);
 
+ 
+
   const handlfile = (e) => {
-    setArticle(e.target.files[0]);
+     
+if(article){
+  setArticle(e.target.files);
+}
+
+   
+    
   };
-  console.log(article);
+ 
+  console.log(article[1]);
   const sub = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -35,7 +44,11 @@ export default function FormPost() {
     formData.append("price", prix);
     formData.append("title", title);
 
-    formData.append("postImages", article);
+    formData.append("postImages", article[0]);
+    formData.append("postImages", article[1]);
+    formData.append("postImages", article[2]);
+    formData.append("postImages", article[3]);
+    
   
     formData.append("description", description);
     formData.append("stars", star);
@@ -91,7 +104,7 @@ axios.post('http://localhost:8000/add',formData)
           }}
           htmlFor=""
         >
-          Title
+          Titre
         </label>
         <input
           value={title}
@@ -116,7 +129,7 @@ axios.post('http://localhost:8000/add',formData)
           }}
           htmlFor=""
         >
-          City
+          Ville
         </label>
         <input
           value={city}
@@ -149,7 +162,7 @@ axios.post('http://localhost:8000/add',formData)
   }}
   htmlFor=""
 >
-  Gender
+  sexe
 </label>
 <input
   value={gender}
@@ -227,7 +240,7 @@ axios.post('http://localhost:8000/add',formData)
   }}
   htmlFor=""
 >
-Roomate Min Age
+Colocataire Minimum Age
 </label>
 <input
   value={minage}
@@ -252,7 +265,7 @@ Roomate Min Age
   }}
   htmlFor=""
 >
-  Roomate Max Age
+Colocataire Maximum Age
 </label>
 <input
   value={maxage}
@@ -277,7 +290,7 @@ Roomate Min Age
           }}
           htmlFor=""
         >
-         Roomate Number
+         Nombres des colocataires
         </label>
         <input
           value={roomate}
@@ -323,7 +336,7 @@ Roomate Min Age
           }}
           htmlFor=""
         >
-          Number of Star
+          Nombres d'étoile
         </label>
         <input
           value={star}
@@ -344,10 +357,11 @@ Roomate Min Age
             marginInline: "10px",
             marginBottom: "8px",
             fontSize: "14px",
+          
           }}
           htmlFor=""
         >
-          Image
+          Images
         </label>
 
         <input
@@ -355,13 +369,16 @@ Roomate Min Age
           type="file"
           filename="article"
           onChange={handlfile}
+          multiple
         />
+       
+        
         <br />
         <br />
         <br />
         <button
           type="submit"
-          style={{ width: "280px", marginInline: "17px" }}
+          style={{marginTop:"-17px", height:"47px",width: "280px", marginInline: "17px" }}
           className="btn btn-block btn-dark"
         >
           Create Post
