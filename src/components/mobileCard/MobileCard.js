@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 
 export default function MobileCard({ info }) {
+  const domainName = "http://localhost:8000/";
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
@@ -12,7 +13,7 @@ export default function MobileCard({ info }) {
           <img
             className="r"
             style={{ height: "220px", width: "330px" }}
-            src={`http://localhost:8000/${info.article}`}
+            src={domainName+info.article}
             alt=""
           />
           <div class="card-body">

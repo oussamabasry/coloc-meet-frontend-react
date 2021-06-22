@@ -24,23 +24,22 @@ function Filtres() {
                             <div className="input-field">
                                 <div className="input-select shadow-none">
                                     <select data-trigger name="choices-single-defaul" className="form-select form-select shadow-none">
-                                        <option placeholder value>Type d'offre</option>
-                                        <option>Toutes les offres</option>
-                                        <option>Résidence d'étudiant</option>
-                                        <option>Particulier</option>
-                                        <option>Longue Durée (&gt; 6 mois)</option>
-                                        <option>Courte Durée (&lt; 6 mois)</option>
-                                        <option> Agence immobilière</option>
+                                        <option placeholder value>Sexe</option>
+                                        <option>Masculin</option>
+                                        <option>Féminin</option>
+                                    
                                     </select>
                                 </div>
                             </div>
                             <div className="input-field">
                                 <div className="input-select">
                                     <select data-trigger name="choices-single-defaul" className="form-select form-select shadow-none">
-                                        <option placeholder value>Type de bien</option>
-                                        <option>Chambre Individuel</option>
-                                        <option>Chambre Double</option>
-                                        <option>Studio</option>
+                                        <option placeholder value>Ville</option>
+                                        <option>Casablanca</option>
+                                        <option>Rabat</option>
+                                        <option>Mohemmadia</option>
+                                        <option>Agadir</option>
+                                        <option>Asfi</option>
                                     </select>
                                 </div>
                             </div>
@@ -59,42 +58,9 @@ function Filtres() {
                             </div>
                         </div>
                         <div className="row second">
-                            <div className="input-field">
-                                <div className="input-select">
-                                    <select data-trigger name="choices-single-defaul" className="form-select form-select shadow-none">
-                                        <option placeholder value>Surface</option>
-                                        <option>[5-10] m²</option>
-                                        <option>[11-15] m²</option>
-                                        <option>[16-20] m²</option>
-                                        <option>[25-30] m²</option>
-                                        <option>[&gt; 31 ] m²</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="input-field">
-                                <div className="input-select">
-                                    <select data-trigger name="choices-single-defaul" className="form-select form-select shadow-none">
-                                        <option placeholder value>Durée</option>
-                                        <option>&lt; 3mois</option>
-                                        <option>[3 mois - 6 mois]</option>
-                                        <option>[7 mois - 9 mois]</option>
-                                        <option>[10 mois - 12 mois]</option>
-                                        <option>&gt; 1 Ans</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="input-field">
-                                <div className="input-select">
-                                    <select data-trigger name="choices-single-defaul" className="form-select form-select shadow-none">
-                                        <option placeholder value={1}>Etages</option>
-                                        <option>Tous</option>
-                                        <option>Rez dec Chaussé</option>
-                                        <option>1er étage</option>
-                                        <option>2ème étage</option>
-                                        <option>2ème étage et plus</option>
-                                    </select>
-                                </div>
-                            </div>
+                           
+                           
+                           
                         </div>
                         <div className="row third">
                             <div className="input-field">

@@ -3,23 +3,14 @@ const reducer = (post = [], action) => {
     case "FETCH":
       return action.payload;
     case "ADD":
-      return {
-        ...post,
-        post: [...post.post, action.payload.post],
-      };
+      return  [...post, action.payload];
 
     case "REMOVE":
-      return {
-        ...post,
-        post: post.post.filter((item) => item._id !== action.payload),
-      };
+     return post.filter(item=> item._id!== action.payload);
+     
     case "UPDATE":
-      return {
-        ...post,
-        post: post.post.map((pos) =>
-          pos._id === action.payload.post._id ? action.payload.post : pos
-        ),
-      };
+      return  post.map((pos) =>pos._id === action.payload._id ? action.payload : pos)
+      
 
     default:
       return post;

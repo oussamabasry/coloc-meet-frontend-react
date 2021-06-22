@@ -278,6 +278,7 @@ export default function Active() {
             <div style={{ marginTop: "30px" }}>est facile sur Colocmeet</div>
           </strong>
           <br />
+
           <ol style={{ color: "white", fontSize: "22px", marginTop: "14px" }}>
             <li>
               Créer un compte et compléter mon dossier de colocation en ligne
@@ -291,8 +292,10 @@ export default function Active() {
             <br />
             <li>Reçevoir une réponse rapidement</li>
             <br/>
+
           </ol>{" "}
           <div style={{ display: "block" }} className="bt">
+            <br />
             <Link to="/signup">
               <button
                 style={{ fontSize: "16px", width: "400px" }}
@@ -306,6 +309,7 @@ export default function Active() {
             <Link to="/announces">
               <button
                 style={{ fontSize: "16px", width: "400px", marginTop: "-10px" }}
+
                 type="button"
                 className="btn btn-block btn-light"
               >

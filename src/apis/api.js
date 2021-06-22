@@ -1,17 +1,16 @@
-
-import axios from 'axios'
+import api from "./serverApi";
 
 
 export const createpost =(ne) =>{
-   return axios.post("http://localhost:8000/add",ne)
+   return api.post("/posts",ne)
 }
 
 export const fetchpost=()=> {
-  return  axios.get('http://localhost:8000/get')
+  return  api.get('/posts')
 }
 
 export const removepost = (id) => {
-  return axios.delete(`http://localhost:8000/remove/${id}`)
+  return api.delete(`/posts/${id}`)
 }
 
-export const updatepost = (id, newpost)=> { return axios.put(`http://localhost:8000/update/${id}`,newpost)}
+export const updatepost = (id, newpost)=> { return api.put(`/posts/${id}`,newpost)}

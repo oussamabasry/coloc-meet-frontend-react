@@ -19,6 +19,8 @@ import Contact from "./components/contact/Contact";
 import OurServices from "./components/ourServices/OurServices";
 import Team from "./components/team/Team";
 
+import Sidebar from "./components/sidebar/Sidebar";
+
 function App() {
   const [isLogged, setIsLogged] = useState(isLogin);
   const login = useSelector((state) => state.login.isLogin);
@@ -30,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <Router history={history}>
-        {isLogged ? <SideBarTest /> : <Navbar />}
+        {isLogged ?  <Sidebar  style={{ backgroundColor:"black"}}/> : <Navbar />}
         <Switch>
           <Route path="/" exact component={Review} />
           <Route path="/signup" component={AccountBox} />

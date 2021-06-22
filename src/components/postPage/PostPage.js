@@ -11,20 +11,12 @@ import { getPost, removePost } from "../../action/Action";
 
 export default function PostPage() {
   const [info, setInfo] = useState([]);
-  const getposts = () => {
-    axios
-      .get("http://localhost:8000/get")
-      .then((res) => setInfo(res.data))
-      .catch((err) => console.error(err));
-  };
+  
   const dispatch = useDispatch();
 
-  const p = useSelector((state) => state.post);
+  const p = useSelector((state) => state);
   console.log(p);
 
-  /* useEffect(() => {
-    getposts()
-}, []) */
 
   useEffect(() => {
     dispatch(getPost());
@@ -32,20 +24,27 @@ export default function PostPage() {
   return (
     <div className="postpage">
       ,
-      <h1 style={{ fontFamily: "serif", fontSize: "37px" }}>
-        You can post , update and delete your Posts
+      <h1 style={{ color:"black",fontFamily: "serif", fontSize: "37px",marginInline:"300px" }}>
+        Vous pouvez créer , modifier et supprimer vos postes
       </h1>
       <div className="all">
+        <div style={{ backgroundColor:"black"}} className="sideba">
+         
+
+         
+        </div>
         <div className="tabl">
           <table className="table ">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">Post</th>
-                <th scope="col">City</th>
-                <th scope="col">street</th>
-                <th scope="col">price </th>
-                <th scope="col">star </th>
+                <th scope="col"><strong>Poste</strong></th>
+                <th scope="col"><strong>Titre</strong></th>
+                <th scope="col"><strong>Ville</strong></th>
+                <th scope="col"><strong>Prix</strong> </th>
+                <th scope="col"><strong>étoiles</strong> </th>
+                <th scope="col"> </th>
+                <th scope="col"> </th>
               </tr>
             </thead>
 
