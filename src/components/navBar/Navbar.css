@@ -3,15 +3,10 @@
 .logo {
   width: 150px;
   height: 60px;
-  margin-inline: 200px;
+  margin-inline: 20px;
 }
 
-@media only screen and (max-width: 992px) {
-  .logo {
-    width: 120px;
-    height: 50px;
-  }
-}
+
 
 ul li {
   text-align: center;
