@@ -9,6 +9,10 @@ export const fetchpost=()=> {
   return  api.get('/posts')
 }
 
+export const getUserpostsAPI = (userId) => {
+  return api.get(`/posts/user/${userId}`);
+};
+
 export const removepost = (id) => {
   return api.delete(`/posts/${id}`)
 }

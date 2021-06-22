@@ -13,7 +13,7 @@ export default function MobileCard({ info }) {
           <img
             className="r"
             style={{ height: "220px", width: "330px" }}
-            src={domainName+info.article}
+            src={domainName + info.article}
             alt=""
           />
           <div class="card-body">
