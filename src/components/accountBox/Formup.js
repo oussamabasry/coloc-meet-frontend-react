@@ -92,7 +92,7 @@ const expandingTransition = {
   stiffness: 30,
 };
 
-export function AccountBox(props) {
+export default function Formup(props) {
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState("signin");
 
@@ -143,8 +143,8 @@ export function AccountBox(props) {
             
           </TopContainer>
           <InnerContainer>
-          {active === "signup" && <SignupForm />}
-            {active === "signin" && <LoginForm />}
+          {active === "signin" && <SignupForm />}
+            {active === "signup" && <LoginForm />}
             
           </InnerContainer>
         </BoxContainer>

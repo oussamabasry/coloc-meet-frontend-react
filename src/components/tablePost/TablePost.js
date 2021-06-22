@@ -104,7 +104,7 @@ export default function TablePost({ info }) {
               onClick={handleShow}
               type="button"
               className="btn btn-primary"
-              style={{marginInline:"32px",height:"33px"}}
+              style={{marginInline:"22px",height:"33px"}}
             >
               
             

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container text-center text-md-left">
         <div className="row text-center text-md-left">
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold title">
+            <h5 style={{marginInline:"43px"}} className="text-uppercase mb-4 font-weight-bold title">
               Coloc Meet
             </h5>
             <p className="sub-title">
@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold title">
+            <h5 style={{marginInline:"-6px"}} className="text-uppercase mb-4 font-weight-bold title">
               Services
             </h5>
             <p className="link-hover">
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 font-weight-bold title">
+            <h5 style={{marginInline:"-5px"}} className="text-uppercase mb-4 font-weight-bold title">
               Liens
             </h5>
             <p className="link-hover">
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 sub-title">
-            <h5 className="text-uppercase mb-4 font-weight-bold title">
+            <h5 style={{marginInline:"43px"}} className="text-uppercase mb-4 font-weight-bold title">
               Contact
             </h5>
             <p>BP 159 Bd Hassan II Mohammedia</p>

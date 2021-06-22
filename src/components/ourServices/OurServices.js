@@ -31,7 +31,7 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <div className="card col-md-3 col-12 ml-2">
+        <div style={{marginInline:"30px"}} className="card col-md-3 col-12 ml-2">
           <div className="card-content">
             <div className="card-body">
               {" "}
@@ -49,7 +49,8 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <div className="card col-md-3 col-12 ml-2">
+        
+        <div   className="card col-md-3 col-12 ml-2">
           <div className="card-content">
             <div className="card-body">
               {" "}

@@ -33,6 +33,7 @@ export const removePost = (id) => async (dispatch) => {
 export const updatePost = (id, post) => async (dispatch) => {
   try {
     const { data } = await updatepost(id, post);
+    console.log(data)
 
     dispatch({
       type: "UPDATE",

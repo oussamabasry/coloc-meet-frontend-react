@@ -33,8 +33,8 @@ h1 {
   margin-top: -80px;
   border: 1px solid black;
   background-color: white;
-  width: 942px;
-  margin-inline: 250px;
+  width: 1056px;
+  margin-inline: 220px;
 }
 
 @media all and (min-width: 570px) and (max-width: 1350px) {

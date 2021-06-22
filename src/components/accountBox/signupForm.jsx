@@ -123,12 +123,7 @@ export function SignupForm(props) {
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
       <Marginer direction="vertical" margin="1em" />
-      <MutedLink href="">
-        Vous avez déjà un compte?
-        <BoldLink href="" onClick={switchToSignin}>
-          S'identifier
-        </BoldLink>
-      </MutedLink>
+      
     </BoxContainer>
   );
 }

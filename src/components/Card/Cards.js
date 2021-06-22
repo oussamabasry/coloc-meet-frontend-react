@@ -10,7 +10,7 @@ import {useSelector,useDispatch} from 'react-redux'
 function Cards() {
   const dispatch = useDispatch();
 
-  const p = useSelector((state) => state.post);
+  const p = useSelector((state) => state);
   useEffect(() => {
     dispatch(getPost());
   }, [dispatch]);

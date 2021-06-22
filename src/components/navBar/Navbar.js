@@ -71,15 +71,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  data-mdb-toggle="modal"
-                  data-mdb-target="#staticBackdrop"
-                  to="/signin"
-                >
-                  <i className="fas fa-user-edit"></i> CREER UN COMPTE
+                <Link className="nav-link" to="/signin">
+                <i className="fas fa-user-edit"></i> CREER UN COMPTE
                 </Link>
               </li>
+              
+                
             </ul>
           </div>
         </div>

@@ -7,7 +7,7 @@ import PostDetialsPage from "./pages/PostDetialsPage";
 import Review from "./components/review/Review";
 import { AccountBox } from "./components/accountBox";
 import { Router, Route, Switch } from "react-router-dom";
-import { LoginForm } from "./components/accountBox/loginForm";
+import Formup  from "./components/accountBox/Formup";
 import ListeAnnoncesPage from "./pages/ListeAnnoncesPage";
 import history from "./shared/history";
 import SecureRoute from "./shared/SecureRoute";
@@ -37,7 +37,7 @@ function App() {
           <Route path="/" exact component={Review} />
           <Route path="/signup" component={AccountBox} />
           <Route path="/announces" component={ListeAnnoncesPage} />
-          <Route path="/signin" component={LoginForm} />
+          <Route path="/signin" component={Formup} />
           <Route path="/announce-details/:postId" component={PostDetialsPage} />
           <Route path="/contactas" component={Contact} />
           <Route path="/services" component={OurServices} />
