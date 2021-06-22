@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removePost } from "../../action/Action";
+import { deletePost } from "../../action/userPostsAction";
 import { Modal, Button, Form } from "react-bootstrap";
 import Edit from "../EditPost/EditPost";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function TablePost({ info }) {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ export default function TablePost({ info }) {
   const handleShow = () => setShow(true);
 
   const remov = (id) => {
-    dispatch(removePost(id));
+    dispatch(deletePost(id));
   };
 
   return (
@@ -26,22 +27,36 @@ export default function TablePost({ info }) {
             src={`http://localhost:8000/${info.postImages[0]}`}
             alt=""
           />
-        </td >
-        <td > <br /> {info.title}</td>
-        <td> <br />{info.city}</td>
-        <td> <br />{info.price}</td>
-        <td> <br />{info.stars}</td>
+        </td>
+        <td>
+          {" "}
+          <br /> {info.title}
+        </td>
+        <td>
+          {" "}
+          <br />
+          {info.city}
+        </td>
+        <td>
+          {" "}
+          <br />
+          {info.price}
+        </td>
+        <td>
+          {" "}
+          <br />
+          {info.stars}
+        </td>
 
         <td>
-        <br />
-          <div className="d-flex align-items-center justify-content-center">
           <br />
+          <div className="d-flex align-items-center justify-content-center">
+            <br />
             <button
               onClick={handleShow}
               type="button"
               className="btn btn-outline-primary"
             >
-              
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,14 +91,13 @@ export default function TablePost({ info }) {
           </Modal>
         </td>
         <td>
-        <br />
+          <br />
           <button
             onClick={() => remov(info._id)}
             type="button"
-            style={{ height: "32px",width:"61px" ,marginInline:"-10px"}}
+            style={{ height: "32px", width: "61px", marginInline: "-10px" }}
             class="btn btn-outline-danger btn-sm px-3"
           >
-            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
@@ -100,17 +114,16 @@ export default function TablePost({ info }) {
             </svg>
           </button>
           <Link to={`/announce-details/${info._id}`}>
-          <button
+            <button
               onClick={handleShow}
               type="button"
               className="btn btn-primary"
               style={{marginInline:"22px",height:"33px"}}
+              style={{ marginInline: "32px", height: "33px" }}
             >
-              
-            
-             Plus d'infos
+              Plus d'infos
             </button>
-            </Link>
+          </Link>
         </td>
       </tr>
     </tbody>

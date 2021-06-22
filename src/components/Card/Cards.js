@@ -1,7 +1,6 @@
 
 import React , {useEffect} from "react";
-import * as mdb from "mdb-ui-kit"; // lib
-import { Input } from "mdb-ui-kit"; // module
+
 
 import "./Cards.css"
 import { getPost } from "../../action/Action";

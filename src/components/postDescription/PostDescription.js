@@ -82,20 +82,26 @@ const PostDescription = ({ post }) => {
                 <strong>Prénom & NOM</strong>
               </th>
               <td>
-                {post.user.firstName} {post.user.lastName}
+                <p style={{ marginLeft: "30px" }}>
+                  {post.user.firstName} {post.user.lastName}
+                </p>
               </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Email</strong>
               </th>
-              <td>{post.user.email}</td>
+              <td>
+                <p style={{ marginLeft: "30px" }}>{post.user.email}</p>
+              </td>
             </tr>
             <tr>
               <th className="pl-0 w-25" scope="row">
                 <strong>Tél</strong>
               </th>
-              <td>{post.user.phone}</td>
+              <td>
+                <p style={{ marginLeft: "30px" }}>{post.user.phone}</p>
+              </td>
             </tr>
           </tbody>
         </table>

@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import toastr from "toastr";
 import "toastr/build/toastr.css";
 
-import {   updatePost } from "../../action/Action";
 
-import axios from "axios";
+import {updatePost } from "../../action/userPostsAction";
+
+
 
 export default function EditPost({ postid, postt }) {
   const po = useSelector((state) => state  );

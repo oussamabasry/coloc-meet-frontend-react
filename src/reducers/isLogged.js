@@ -1,5 +1,8 @@
 const loggedReducer = (
-  state = { isLogin: localStorage.getItem("isLogged"), token: localStorage.getItem("token") },
+  state = {
+    isLogin: localStorage.getItem("isLogged"),
+    token: localStorage.getItem("token"),
+  },
   action
 ) => {
   switch (action.type) {

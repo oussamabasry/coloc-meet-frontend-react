@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { addpost } from "../../action/Action";
-import './FormPost'
+import { addPost } from "../../action/userPostsAction";
+import "./FormPost";
 
 import axios from "axios";
 
@@ -23,22 +24,17 @@ export default function FormPost() {
   const [maxage, setMaxage] = useState(0);
   const [minage, setMinage] = useState(0);
 
- 
-
   const handlfile = (e) => {
-     
-if(article){
-  setArticle(e.target.files);
-}
-
-   
-    
+    if (article) {
+      setArticle(e.target.files);
+    }
   };
- 
+
   console.log(article);
   const sub = (e) => {
     e.preventDefault();
     const formData = new FormData();
+    const user = JSON.parse(localStorage.getItem("userData"));
 
     formData.append("city", city);
     formData.append("price", prix);
@@ -48,8 +44,7 @@ if(article){
     formData.append("postImages", article[1]);
     formData.append("postImages", article[2]);
     formData.append("postImages", article[3]);
-    
-  
+
     formData.append("description", description);
     formData.append("stars", star);
 
@@ -59,7 +54,8 @@ if(article){
     formData.append("roommatesNumber", roomate);
     formData.append("roommatesMinAge", maxage);
     formData.append("roommatesMaxAge", minage);
-    
+
+    formData.append("userId", user._id);
 
     setCity("");
     setPrix("");
@@ -73,17 +69,10 @@ if(article){
     setMaxage("");
     setMinage("");
 
-    /*
-axios.post('http://localhost:8000/add',formData)
-.then(()=> console.log('new post !!'))
-.catch(err=> console.error(err))
- */
-
-    dispatch(addpost(formData));
+    dispatch(addPost(formData));
   };
   return (
     <div>
-      
       <form
         onSubmit={sub}
         encType="multipart/form-data"
@@ -91,120 +80,110 @@ axios.post('http://localhost:8000/add',formData)
         className="ff"
       >
         <div className="row">
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "6px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              Titre
+            </label>
+            <input
+              value={title}
+              style={{
+                width: "150px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setTitle(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "8px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              Ville
+            </label>
+            <input
+              value={city}
+              style={{
+                width: "130px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setCity(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+        </div>
 
-        <div className="col-md-6">
-
-       
-  
-          <label
-          style={{
-            marginInline: "10px",
-            marginBottom: "6px",
-            fontSize: "14px",
-          }}
-          htmlFor=""
-        >
-          Titre
-        </label>
-        <input
-          value={title}
-          style={{
-            width: "150px",
-            marginInline: "9px",
-            border: "1px solid black",
-            height: "40px",
-          }}
-          onChange={(e) => setTitle(e.target.value)}
-          id="city"
-          type="text"
-          className="form-control"
-        />
-           </div>
-           <div className="col-md-6">
-          <label
-          style={{
-            marginInline: "10px",
-            marginBottom: "8px",
-            fontSize: "14px",
-          }}
-          htmlFor=""
-        >
-          Ville
-        </label>
-        <input
-          value={city}
-          style={{
-            width: "130px",
-            marginInline: "9px",
-            border: "1px solid black",
-            height: "40px",
-          }}
-          onChange={(e) => setCity(e.target.value)}
-          id="city"
-          type="text"
-          className="form-control"
-        />
-           </div>
-           </div>
-        
-
-           <div className="row">
-
-<div className="col-md-6">
-
-
-
-  <label
-  style={{
-    marginInline: "10px",
-    marginBottom: "8px",
-    fontSize: "14px",
-  }}
-  htmlFor=""
->
-  sexe
-</label>
-<input
-  value={gender}
-  style={{
-    width: "150px",
-    marginInline: "9px",
-    border: "1px solid black",
-    height: "40px",
-  }}
-  onChange={(e) => setGender(e.target.value)}
-  id="city"
-  type="text"
-  className="form-control"
-/>
-   </div>
-   <div className="col-md-6">
-  <label
-  style={{
-    marginInline: "10px",
-    marginBottom: "8px",
-    fontSize: "14px",
-  }}
-  htmlFor=""
->
-  Status
-</label>
-<input
-  value={status}
-  style={{
-    width: "130px",
-    marginInline: "9px",
-    border: "1px solid black",
-    height: "40px",
-  }}
-  onChange={(e) => setStatus(e.target.value)}
-  id="city"
-  type="text"
-  className="form-control"
-/>
-   </div>
-   </div>
-
+        <div className="row">
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "8px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              sexe
+            </label>
+            <input
+              value={gender}
+              style={{
+                width: "150px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setGender(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "8px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              Status
+            </label>
+            <input
+              value={status}
+              style={{
+                width: "130px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setStatus(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+        </div>
 
         <label
           style={{
@@ -227,62 +206,58 @@ axios.post('http://localhost:8000/add',formData)
         <div className="row"></div>
 
         <div className="row">
-
-<div className="col-md-6">
-
-
-
-  <label
-  style={{
-    marginInline: "10px",
-    marginBottom: "6px",
-    fontSize: "14px",
-  }}
-  htmlFor=""
->
-Colocataire Minimum Age
-</label>
-<input
-  value={minage}
-  style={{
-    width: "150px",
-    marginInline: "9px",
-    border: "1px solid black",
-    height: "40px",
-  }}
-  onChange={(e) => setMinage(e.target.value)}
-  id="city"
-  type="text"
-  className="form-control"
-/>
-   </div>
-   <div className="col-md-6">
-  <label
-  style={{
-    marginInline: "10px",
-    marginBottom: "8px",
-    fontSize: "14px",
-  }}
-  htmlFor=""
->
-Colocataire Maximum Age
-</label>
-<input
-  value={maxage}
-  style={{
-    width: "130px",
-    marginInline: "9px",
-    border: "1px solid black",
-    height: "40px",
-  }}
-  onChange={(e) => setMaxage(e.target.value)}
-  id="city"
-  type="text"
-  className="form-control"
-/>
-   </div>
-   </div>
-   <label
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "6px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              Colocataire Minimum Age
+            </label>
+            <input
+              value={minage}
+              style={{
+                width: "150px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setMinage(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6">
+            <label
+              style={{
+                marginInline: "10px",
+                marginBottom: "8px",
+                fontSize: "14px",
+              }}
+              htmlFor=""
+            >
+              Colocataire Maximum Age
+            </label>
+            <input
+              value={maxage}
+              style={{
+                width: "130px",
+                marginInline: "9px",
+                border: "1px solid black",
+                height: "40px",
+              }}
+              onChange={(e) => setMaxage(e.target.value)}
+              id="city"
+              type="text"
+              className="form-control"
+            />
+          </div>
+        </div>
+        <label
           style={{
             marginInline: "10px",
             marginBottom: "8px",
@@ -290,7 +265,7 @@ Colocataire Maximum Age
           }}
           htmlFor=""
         >
-         Nombres des colocataires
+          Nombres des colocataires
         </label>
         <input
           value={roomate}
@@ -357,7 +332,6 @@ Colocataire Maximum Age
             marginInline: "10px",
             marginBottom: "8px",
             fontSize: "14px",
-          
           }}
           htmlFor=""
         >
@@ -371,14 +345,18 @@ Colocataire Maximum Age
           onChange={handlfile}
           multiple
         />
-       
-        
+
         <br />
         <br />
         <br />
         <button
           type="submit"
-          style={{marginTop:"-17px", height:"47px",width: "280px", marginInline: "17px" }}
+          style={{
+            marginTop: "-17px",
+            height: "47px",
+            width: "280px",
+            marginInline: "17px",
+          }}
           className="btn btn-block btn-dark"
         >
           Create Post

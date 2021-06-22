@@ -1,12 +1,29 @@
-import { createpost, fetchpost, removepost, updatepost } from "../apis/api";
+import {
+  createpost,
+  fetchpost,
+  removepost,
+  updatepost,
+  getUserpostsAPI,
+} from "../apis/api";
 
 import toastr from "toastr";
 import "toastr/build/toastr.css";
+
 export const getPost = () => async (dispatch) => {
   try {
     const { data } = await fetchpost();
 
     dispatch({ type: "FETCH", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getUserPosts = (userId) => async (dispatch) => {
+  try {
+    const { data } = await getUserpostsAPI(userId);
+
+    dispatch({ type: "GETUSERPOSTS", payload: data });
   } catch (error) {
     console.log(error);
   }
