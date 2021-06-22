@@ -13,6 +13,12 @@ export const loginUser = (authData) => async (dispatch) => {
       JSON.stringify({
         token: data.token,
         isLogged: true,
+        _id: data.user._id,
+        firstName: data.user.firstName,
+        lastName: data.user.lastName,
+        birth: data.user.birth,
+        email: data.user.email,
+        phone: data.user.phone,
       })
     );
     toastr.success("Login succecfully", "Congratulation");

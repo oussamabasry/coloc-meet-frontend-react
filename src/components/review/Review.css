@@ -1,272 +1,264 @@
-
-.body{
-    
-        }
-
-h2{
- text-align: center;
- padding: 4px;
- font-size: 35px;
- margin-top: 20px;
+.body {
 }
-.acc{
+
+h2 {
+  text-align: center;
+  padding: 4px;
+  font-size: 35px;
+  margin-top: 20px;
+}
+.acc {
   height: 700px;
-  background: #003973;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #003973; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e5e5be,
+    #003973
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e5e5be,
+    #003973
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   margin-top: 60px;
-  
 }
-.si{
-    display: flex;
-    margin-top: -62px;
-    margin-inline: 120px;
+.si {
+  display: flex;
+  margin-top: -62px;
+  margin-inline: 120px;
+}
+.sv {
+  margin-inline: 23px;
+  padding: 60px;
+  margin-top: 83px;
+}
+.car {
+  width: 365px;
+  margin-inline: -3px;
+  border: 1px dotted black;
+}
+.post {
+  transition: all 0.2s ease-in-out;
+}
+.post:hover {
+  transform: scale(1.1);
+}
+.ress {
+  transition: all 0.2s ease-in-out;
+}
+.ress:hover {
+  transform: scale(1.1);
+}
 
-}
-.sv{
-    margin-inline:23px;
-    padding: 60px;
-    margin-top: 83px;
-}
-.car{
-    width: 365px;
-    margin-inline: -3px;
-    border: 1px dotted black;
-}
-.post { transition: all .2s ease-in-out; }
-.post:hover { transform: scale(1.1); }
-.ress { transition: all .2s ease-in-out; }
-.ress:hover { transform: scale(1.1); }
-
-.card-img-top{
-    height: 190px;
+.card-img-top {
+  height: 190px;
 }
 
 .av {
-    border-radius: 20px;
-    width: 600px;
-    height: 50px;
-    margin-inline: -80px;
-    background-size: 400% 400%;
-    margin-top: -61px;
-    
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 6s ease infinite;
-   
+  border-radius: 20px;
+  width: 600px;
+  height: 50px;
+  margin-inline: -80px;
+  background-size: 400% 400%;
+  margin-top: -61px;
+
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 6s ease infinite;
 }
-.vb{
-    border-radius: 20px;
-    width: 600px;
-    height: 50px;
-    margin-inline: 20px;
-    background-size: 400% 400%;
-    margin-top: -61px;
-    color: black;
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 6s ease infinite;
-   
+.vb {
+  border-radius: 20px;
+  width: 600px;
+  height: 50px;
+  margin-inline: 20px;
+  background-size: 400% 400%;
+  margin-top: -61px;
+  color: black;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 6s ease infinite;
 }
 .ho {
-    border-radius: 20px;
-    width: 600px;
-    height: 50px;
-    margin-inline: -70px;
-    background-size: 400% 400%;
-    margin-top: -61px;
-    
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 6s ease infinite;
-   
+  border-radius: 20px;
+  width: 600px;
+  height: 50px;
+  margin-inline: -70px;
+  background-size: 400% 400%;
+  margin-top: -61px;
+
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 6s ease infinite;
 }
 
-.d{
-    border-radius: 20px;
-    width: 600px;
-    height: 50px;
-    color: black;
-    margin-inline: 18px;
-    background-size: 400% 400%;
-    margin-top: -61px;
-    
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 6s ease infinite;
-   
+.d {
+  border-radius: 20px;
+  width: 600px;
+  height: 50px;
+  color: black;
+  margin-inline: 18px;
+  background-size: 400% 400%;
+  margin-top: -61px;
+
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 6s ease infinite;
 }
-.btni{
-    display: flex;
-    justify-content: space-around;
+.btni {
+  display: flex;
+  justify-content: space-around;
 }
 
+@media all and (min-width: 401px) and (max-width: 1240px) {
+  .top {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .post {
+    margin-top: 20px;
+  }
+  .sv {
+    display: none;
+  }
+  .car {
+    width: 225px;
+  }
 
-@media all and  (min-width: 401px) and (max-width: 1240px) {
-    .top{
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-    .post{
-        margin-top: 20px;
-    }
-    .sv{
-        display: none;
-    }
-    .car{
-        width: 225px;
-    }
-    
-  .d{
-      width: 520px;
-      margin-inline: 60px;  }
-    
+  .d {
+    width: 520px;
+    margin-inline: 60px;
+  }
 }
 @media screen and (max-width: 401px) {
-    .si{
-        margin-inline: 47px;
-}
-    .d{
-        width: 600px;
-        margin-top: 80px;
-        margin-inline: -59px;
-    }
-    .ho{
-        margin-inline: -207px;
-        padding-bottom: 130px;
+  .si {
+    margin-inline: 47px;
+  }
+  .d {
+    width: 600px;
+    margin-top: 80px;
+    margin-inline: -59px;
+  }
+  .ho {
+    margin-inline: -207px;
+    padding-bottom: 130px;
+  }
+  .vb {
+    width: 600px;
+    margin-top: 80px;
+    margin-inline: -108px;
+  }
+  .av {
+    margin-inline: -155px;
+  }
+  .po {
+    margin-inline: -99px;
+    margin-bottom: 83px;
+  }
+  .car {
+    margin-inline: -1px;
+    width: 336px;
+  }
+  .post {
+    margin-top: 10px;
 
-    }
-    .vb{
-        width: 600px;
-        margin-top: 80px;
-        margin-inline: -108px;
-    }
-    .av{
-        margin-inline: -155px;
+    position: relative;
+    right: 54px;
 
-    }
-    .po{
-        margin-inline: -99px;
-        margin-bottom: 83px;
-        
-    }
-    .car{
-        margin-inline: -1px;
-        width: 336px;
+    max-width: 320px;
+    min-height: 303px;
+  }
+  .sv {
+    display: none;
+  }
+  .top {
+    margin-top: 90px;
+  }
 
-    }
-    .post{
-        margin-top: 10px;
-      
-        position: relative;
-right: 54px;
-        
-        max-width: 320px;
-        min-height: 303px;
-
-    }
-    .sv{
-        display: none;
-    }
-    .top{
-        margin-top: 90px;
-    }
-   
-    
-    
-    
-    
- 
-.def {
+  .def {
     width: 200px;
     height: 10px;
-}
+  }
 
-.post h1 {
+  .post h1 {
     max-width: 130px;
-    font-size: 3.0vh;
+    font-size: 3vh;
     height: 100px;
-} */
-.def p {
+  }
+  */ .def p {
     font-size: 10.6px;
-}
-.top{
+  }
+  .top {
     flex-direction: column;
+  }
 }
 
-
+.hom {
+  display: flex;
+  margin-inline: 30px;
 }
- 
-  .hom{
-      display: flex;
-      margin-inline: 30px ;
-  }
-  .def{
-      margin-top: 40px;
-      flex: 0.7;
-text-align: center;
-      font-size: 20px;
-     background-image: url("https://www.thesleepjudge.com/wp-content/uploads/2017/05/Light-and-Space.jpg");
-    border-radius: 20px;
-    margin-inline: 0px;
-      width: 640px;
-      height: 390px;
-  }
-  .def p{
-    font-size: 17px;
-  }
-  .j{
-    background: #003973;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
-  }
-  .hom{
-      width: 10px;
-  }
-  
- 
-  .log{
-      background-color: white;
-      width: 254px;
-      margin-top:   4px;
-      margin-inline: 41.5%;
-      border-radius: 10px;
-      
-      
-      
-  }
-  .acc img{
-      height: 90px;
-      width: 110px;
-      padding: 10px;
-  }
-  .sign{
-      padding: 10px;
-      border-radius: 10px;
-      height: 430px;
-      margin-top:140px ;
-      margin-left: -37px;
-      
-      
-
-  }
-  .sign h6{
-      font-size: 36px;
-  }
-  .sign p{
-    font-size:19px;
+.def {
+  margin-top: 40px;
+  flex: 0.7;
+  text-align: center;
+  font-size: 20px;
+  background-image: url("https://www.thesleepjudge.com/wp-content/uploads/2017/05/Light-and-Space.jpg");
+  border-radius: 20px;
+  margin-inline: 0px;
+  width: 640px;
+  height: 390px;
 }
- 
-  
-  .imog{
-      width: 34px;
-      height: 38px;
-  }
-  
-  
-  h1{
-      color: white;
-  }
+.def p {
+  font-size: 17px;
+}
+.j {
+  background: #003973; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e5e5be,
+    #003973
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e5e5be,
+    #003973
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.hom {
+  width: 10px;
+}
+
+.log {
+  background-color: white;
+  width: 254px;
+  margin-top: 4px;
+  margin-inline: 41.5%;
+  border-radius: 10px;
+}
+.acc img {
+  height: 90px;
+  width: 110px;
+  padding: 10px;
+}
+.sign {
+  padding: 10px;
+  border-radius: 10px;
+  height: 430px;
+  margin-top: 140px;
+  margin-left: -37px;
+}
+.sign h6 {
+  font-size: 36px;
+}
+.sign p {
+  font-size: 19px;
+}
+
+.imog {
+  width: 34px;
+  height: 38px;
+}
+
+h1 {
+  color: white;
+}
