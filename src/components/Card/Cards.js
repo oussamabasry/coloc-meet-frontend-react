@@ -9,7 +9,7 @@ function Cards() {
   const dispatch = useDispatch();
 
   const p = useSelector((state) => state);
-  console.log(p)
+  console.log(p);
   useEffect(() => {
     dispatch(getPost());
   }, [dispatch]);
@@ -60,7 +60,7 @@ function Cards() {
                   {card.price} Dh/Mois
                 </h5>
                 <p style={{ marginTop: "10px" }} className="">
-                  Pour {card.gender} 
+                  Pour {card.gender}
                 </p>
                 <div className>
                   <img
@@ -87,54 +87,6 @@ function Cards() {
         <h3 className=" header m-2">{data.header}</h3>
         <div className="row"> {cardsTwo} </div>
       </div>
-
-      <nav aria-label="..." className="pagination-navbar">
-        <ul className="pagination pagination-lg justify-content-center ">
-          <li className="page-item">
-            <a className="page-link" href="#">
-              Pevious
-            </a>
-          </li>
-          <li className="page-item active" aria-current="page">
-            <span className="page-link">1</span>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              2
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              3
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              4
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              5
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              6
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              ...
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              Next
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }
