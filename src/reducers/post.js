@@ -9,12 +9,12 @@ const reducer = (post = [], action) => {
       return post.filter((item) => item._id !== action.payload);
 
     case "UPDATE":
+      return post.map((pos) =>
+        pos._id === action.payload.post._id ? action.payload.post : pos
+      );
+    case "GET_POST_FILTER":
+      return action.payload;
 
-       return post.map((pos) =>
-         pos._id === action.payload.post._id ? action.payload.post : pos
-       );
-
-      
     default:
       return post;
   }

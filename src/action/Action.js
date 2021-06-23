@@ -4,6 +4,7 @@ import {
   removepost,
   updatepost,
   getUserpostsAPI,
+  getPostsFilterApi,
 } from "../apis/api";
 
 import toastr from "toastr";
@@ -50,12 +51,22 @@ export const removePost = (id) => async (dispatch) => {
 export const updatePost = (id, post) => async (dispatch) => {
   try {
     const { data } = await updatepost(id, post);
-    console.log(data)
+    console.log(data);
 
     dispatch({
       type: "UPDATE",
       payload: data,
     });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getPostsFilter = (FilterData) => async (dispatch) => {
+  try {
+    const { data } = await getPostsFilterApi(FilterData);
+
+    dispatch({ type: "GET_POST_FILTER", payload: data });
   } catch (error) {
     console.log(error);
   }

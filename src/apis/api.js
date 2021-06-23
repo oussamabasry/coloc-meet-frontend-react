@@ -17,4 +17,8 @@ export const removepost = (id) => {
   return api.delete(`/posts/${id}`)
 }
 
+export const getPostsFilterApi = (data) => {
+  return api.post("/posts/filter", data);
+};
+
 export const updatepost = (id, newpost)=> { return api.put(`/posts/${id}`,newpost)}

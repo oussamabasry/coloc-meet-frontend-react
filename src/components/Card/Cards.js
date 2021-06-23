@@ -9,6 +9,7 @@ function Cards() {
   const dispatch = useDispatch();
 
   const p = useSelector((state) => state);
+  console.log(p)
   useEffect(() => {
     dispatch(getPost());
   }, [dispatch]);
@@ -48,7 +49,7 @@ function Cards() {
           <div className="card-body">
             <div className="flex">
               <a href="#">
-                <p className="card-text">{card.title}</p>
+                <p className="card-text">{card.title} </p>
               </a>
               <p className="property-type">{card.type}</p>
             </div>
@@ -58,6 +59,9 @@ function Cards() {
                   {" "}
                   {card.price} Dh/Mois
                 </h5>
+                <p style={{ marginTop: "10px" }} className="">
+                  Pour {card.gender} 
+                </p>
                 <div className>
                   <img
                     src="https://www.immojeune.com//img/icon-location.svg"
