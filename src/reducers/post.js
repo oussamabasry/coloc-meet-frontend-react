@@ -14,6 +14,8 @@ const reducer = (post = [], action) => {
       );
     case "GET_POST_FILTER":
       return action.payload;
+    case "POST_SEARCH":
+      return action.payload;
 
     default:
       return post;
