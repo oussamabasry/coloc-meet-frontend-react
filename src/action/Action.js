@@ -5,6 +5,7 @@ import {
   updatepost,
   getUserpostsAPI,
   getPostsFilterApi,
+  getPostssearchApi,
 } from "../apis/api";
 
 import toastr from "toastr";
@@ -71,3 +72,13 @@ export const getPostsFilter = (FilterData) => async (dispatch) => {
     console.log(error);
   }
 };
+export const Postsearch = (search) => async (dispatch) => {
+  try {
+    const { data } = await getPostssearchApi(search);
+
+    dispatch({ type: "POST_SEARCH", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+

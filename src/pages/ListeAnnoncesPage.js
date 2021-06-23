@@ -4,9 +4,13 @@ import Filtres from  "../components/filtres/Filtres";
 import Cards from "../components/Card/Cards";
 
 function ListeAnnoncesPage() {
+
+
+   const [post,setPost]= React.useState([])
+
     return (
         <div>
-            <Filtres />
+            <Filtres setpost={setPost} />
             <Cards />
         </div>
     );

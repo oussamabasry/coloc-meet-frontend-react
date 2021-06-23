@@ -21,9 +21,9 @@ export default function Review() {
     return item.stars >= 4;
   });
 
- const getPost = filtrePosts
-   .slice(0, 3)
-   .map((item) => <CardHome props={item} />);
+  const getPost = filtrePosts
+    .slice(0, 3)
+    .map((item) => <CardHome props={item} />);
 
   return (
     <div className="body">
