@@ -30,7 +30,7 @@ export default function PostPage() {
           color: "black",
           fontFamily: "serif",
           fontSize: "37px",
-          marginInline: "300px",
+          marginInline: "130px",
         }}
       >
         Vous pouvez créer , modifier et supprimer vos postes
@@ -67,7 +67,7 @@ export default function PostPage() {
         </div>
 
         <div className="form">
-          <Form info={info} />
+          <Form  info={info} />
         </div>
       </div>
       <div className="cardd">
