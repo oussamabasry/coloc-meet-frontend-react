@@ -36,7 +36,7 @@ function App() {
       <Router history={history}>
         {isLogged ? (
           <>
-            <Sidebar style={{ backgroundColor: "black" }} />
+            <Sidebar className="side" style={{ backgroundColor: "black" }} />
             <NavBarLogin />
           </>
         ) : (

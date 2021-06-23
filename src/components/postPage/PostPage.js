@@ -30,7 +30,7 @@ export default function PostPage() {
           color: "black",
           fontFamily: "serif",
           fontSize: "37px",
-          marginInline: "130px",
+           marginInline:"170px"
         }}
       >
         Vous pouvez créer , modifier et supprimer vos postes

@@ -76,8 +76,8 @@ export default function FormPost() {
       <form
         onSubmit={sub}
         encType="multipart/form-data"
-        style={{ marginTop: "10px" }}
-        className="ff"
+        style={{ width:"270px", marginTop: "10px" }}
+         
       >
         <div className="row">
           <div className="col-md-6">
@@ -94,7 +94,6 @@ export default function FormPost() {
             <input
               value={title}
               style={{
-                width: "150px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -119,7 +118,6 @@ export default function FormPost() {
             <input
               value={city}
               style={{
-                width: "130px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -147,7 +145,6 @@ export default function FormPost() {
             <input
               value={gender}
               style={{
-                width: "150px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -172,7 +169,6 @@ export default function FormPost() {
             <input
               value={status}
               style={{
-                width: "130px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -200,7 +196,7 @@ export default function FormPost() {
           onChange={(e) => setDescription(e.target.value)}
           style={{ marginInline: "33px" }}
           name=""
-          cols="32"
+          cols="30"
           rows="5"
         ></textarea>
         <div className="row"></div>
@@ -218,9 +214,9 @@ export default function FormPost() {
               Colocataire Minimum Age
             </label>
             <input
+              className="min"
               value={minage}
               style={{
-                width: "150px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -243,9 +239,9 @@ export default function FormPost() {
               Colocataire Maximum Age
             </label>
             <input
+              className="max"
               value={maxage}
               style={{
-                width: "130px",
                 marginInline: "9px",
                 border: "1px solid black",
                 height: "40px",
@@ -270,7 +266,6 @@ export default function FormPost() {
         <input
           value={roomate}
           style={{
-            width: "300px",
             marginInline: "9px",
             border: "1px solid black",
             height: "40px",
@@ -293,7 +288,6 @@ export default function FormPost() {
         <input
           value={prix}
           style={{
-            width: "300px",
             marginInline: "9px",
             border: "1px solid black",
             height: "40px",
@@ -316,7 +310,6 @@ export default function FormPost() {
         <input
           value={star}
           style={{
-            width: "300px",
             marginInline: "9px",
             border: "1px solid black",
             height: "40px",
@@ -355,7 +348,7 @@ export default function FormPost() {
             marginTop: "-17px",
             height: "47px",
             width: "280px",
-            marginInline: "17px",
+            marginInline: "5px",
           }}
           className="btn btn-block btn-dark"
         >

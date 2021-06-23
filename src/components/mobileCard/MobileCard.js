@@ -9,20 +9,20 @@ export default function MobileCard({ info }) {
   return (
     <div>
       <div class="col">
-        <div class="card mt-5">
+        <div style={{ height: "347px", width: "270px" }} class="card mt-5">
           <img
             className="r"
-            style={{ height: "220px", width: "330px" }}
+            style={{ height: "170px", width: "250px" }}
             src={domainName + info.postImages[0]}
             alt=""
           />
           <div class="card-body">
-            <h3 class="card-title">{info.city}</h3>
+            <h3 class="card-title">{info.title}</h3>
 
             <ul style={{ fontSize: "16px" }}>
-              <li>street : {info.street}</li>
-              <li>prix: {info.prix}</li>
-              <li>number of star : {info.star}</li>
+              <li>Ville : {info.city}</li>
+              <li>prix: {info.price}</li>
+              <li>number of star : {info.stars}</li>
             </ul>
           </div>
           <div className="b">
@@ -32,7 +32,7 @@ export default function MobileCard({ info }) {
                   onClick={handleShow}
                   type="button"
                   style={{ width: "100px" }}
-                  className="btn btn-outline-primary"
+                  className="btn  btn-outline-primary"
                 >
                   {" "}
                   <svg
