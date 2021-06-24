@@ -23,6 +23,7 @@ import UserDetailsEdit from "./components/userDetails/UserDetailsEdit";
 import UserDetails from "./components/userDetails/UserDetails";
 import NavBarLogin from "./components/navBarLogin/NavBarLogin";
 
+
 function App() {
   const [isLogged, setIsLogged] = useState(isLogin);
   const login = useSelector((state) => state.login.isLogin);
