@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PostImages.css";
 
 const PostImages = ({ postImages }) => {
-  const domainName = "http://localhost:8000/";
+  const domainName = "https://coloc-meet-back.herokuapp.com/";
   const [selectedImage, setSelectedImage] = useState(
     domainName + postImages[0]
   );

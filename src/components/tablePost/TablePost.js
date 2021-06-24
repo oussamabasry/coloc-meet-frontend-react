@@ -24,7 +24,7 @@ export default function TablePost({ info }) {
           {" "}
           <img
             style={{ height: "60px", width: "100px" }}
-            src={`http://localhost:8000/${info.postImages[0]}`}
+            src={`https://coloc-meet-back.herokuapp.com/${info.postImages[0]}`}
             alt=""
           />
         </td>
@@ -118,7 +118,7 @@ export default function TablePost({ info }) {
               onClick={handleShow}
               type="button"
               className="btn btn-primary"
-              style={{marginInline:"22px",height:"33px"}}
+              style={{ marginInline: "22px", height: "33px" }}
               style={{ marginInline: "32px", height: "33px" }}
             >
               Plus d'infos

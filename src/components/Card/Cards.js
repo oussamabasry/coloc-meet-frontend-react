@@ -41,7 +41,7 @@ function Cards() {
         <div className="card m-2">
           <a href="#">
             <img
-              src={`http://localhost:8000/${card.postImages[0]}`}
+              src={`https://coloc-meet-back.herokuapp.com/${card.postImages[0]}`}
               className="card-img-top"
               alt="..."
             />

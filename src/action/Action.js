@@ -72,6 +72,7 @@ export const getPostsFilter = (FilterData) => async (dispatch) => {
     console.log(error);
   }
 };
+
 export const Postsearch = (search) => async (dispatch) => {
   try {
     const { data } = await getPostssearchApi(search);

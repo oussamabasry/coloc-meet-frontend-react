@@ -3,7 +3,7 @@ import "./CardHome.css";
 import { Link } from "react-router-dom";
 
 const CardHome = ({ props }) => {
-  const domainName = "http://localhost:8000/";
+  const domainName = "https://coloc-meet-back.herokuapp.com/";
   const fiveStars = () => {
     const stars = [];
     let primary = "text-warning";

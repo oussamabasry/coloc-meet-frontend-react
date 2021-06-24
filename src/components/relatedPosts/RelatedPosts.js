@@ -5,7 +5,7 @@ import Spinner from "../Spinner/Spinner";
 import { Link } from "react-router-dom";
 
 const RelatedPosts = ({ postId }) => {
-  const domainName = "http://localhost:8000/";
+  const domainName = "https://coloc-meet-back.herokuapp.com/";
   const [relatedPosts, setRelatedPosts] = useState(null);
 
   useEffect(() => {
